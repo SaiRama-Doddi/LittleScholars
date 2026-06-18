@@ -39,7 +39,7 @@ export default function FloatingBackgroundIcons() {
   if (!mounted) return null
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none">
+    <div className="fixed inset-0 pointer-events-none z-30 overflow-hidden select-none">
       {iconsList.map((item, idx) => {
         const { Icon, color, size, basePos, anim } = item
         return (
