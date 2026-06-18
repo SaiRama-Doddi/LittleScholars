@@ -27,30 +27,35 @@ const PencilDoodle = ({ className }) => (
 export default function Programs() {
   const programList = [
     {
+      id: 'day-care',
       title: 'Day Care',
       desc: 'A safe and caring space where children feel comfortable, secure and loved.',
       image: programDaycare,
       colorClass: 'bg-[#fff5f6] border-pink-200/90 hover:shadow-pink-100/60 hover:border-pink-300',
     },
     {
+      id: 'play-group',
       title: 'Play Group',
       desc: 'Fun-filled activities that encourage play, social skills and early learning.',
       image: programPlaygroup,
       colorClass: 'bg-[#f4fbf7] border-emerald-200/90 hover:shadow-emerald-100/60 hover:border-emerald-300',
     },
     {
+      id: 'nursery',
       title: 'Nursery',
       desc: 'Building strong basics through structured learning and exciting experiences.',
       image: programNursery,
       colorClass: 'bg-[#fffbf0] border-amber-200/90 hover:shadow-amber-100/60 hover:border-amber-300',
     },
     {
+      id: 'junior-kg',
       title: 'Junior KG',
       desc: 'Encouraging curiosity, creativity and independence in young learners.',
       image: programJuniorKG,
       colorClass: 'bg-[#f0f7ff] border-blue-200/90 hover:shadow-blue-100/60 hover:border-blue-300',
     },
     {
+      id: 'senior-kg',
       title: 'Senior KG',
       desc: 'Preparing children for the future with skills, confidence and knowledge.',
       image: programSeniorKG,
@@ -120,7 +125,7 @@ export default function Programs() {
 
               {/* View Details Link */}
               <Link
-                to="/admissions"
+                to={`/programs/${prog.id}`}
                 className="mt-6 text-xs font-bold uppercase tracking-wider text-[#0c2b5c] hover:text-brand-orange transition-colors flex items-center space-x-1"
               >
                 <span>View Details</span>

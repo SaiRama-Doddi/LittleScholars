@@ -7,6 +7,7 @@ import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
 import AdmissionsPage from './pages/AdmissionsPage'
 import EnrollPage from './pages/EnrollPage'
+import ProgramDetailsPage from './pages/ProgramDetailsPage'
 import Footer from './components/Footer'
 import FloatingBackgroundIcons from './components/FloatingBackgroundIcons'
 
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admissions" element={<AdmissionsPage />} />
           <Route path="/enroll" element={<EnrollPage />} />
+          <Route path="/programs/:programId" element={<ProgramDetailsPage />} />
         </Routes>
       </div>
 
