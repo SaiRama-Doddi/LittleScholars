@@ -24,7 +24,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth relative overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth relative">
       <ScrollToTop />
       <FloatingBackgroundIcons />
       <div>

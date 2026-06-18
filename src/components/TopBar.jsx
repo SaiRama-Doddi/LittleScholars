@@ -4,10 +4,13 @@ export default function TopBar() {
   return (
     <div className="bg-brand-blue text-white py-1.5 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center border-b border-white/10 font-outfit">
       {/* Contact Details */}
-      <div className="flex flex-row flex-wrap justify-center items-center gap-x-4 gap-y-1 text-center text-[10.5px] sm:text-sm">
+      <div className="flex flex-row flex-wrap justify-center items-center gap-x-4 gap-y-1 text-center text-[10px] sm:text-sm">
         <a href="tel:9492848489" className="flex items-center hover:text-brand-yellow transition-colors duration-200 whitespace-nowrap">
           <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-brand-yellow flex-shrink-0" />
-          <span className="font-semibold">9492 8484 89 / 9491 7373 99</span>
+          <span className="font-semibold">
+            <span className="hidden sm:inline">9492 8484 89 / 9491 7373 99</span>
+            <span className="sm:hidden">9492 8484 89</span>
+          </span>
         </a>
         <a href="mailto:littlescholarsips@gmail.com" className="flex items-center hover:text-brand-yellow transition-colors duration-200 whitespace-nowrap">
           <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-brand-yellow flex-shrink-0" />

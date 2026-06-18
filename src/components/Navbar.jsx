@@ -24,6 +24,18 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Lock body scroll when mobile menu is open to prevent horizontal shifting
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
   // Scrollspy: Automatically detect active section on homepage
   useEffect(() => {
     if (location.pathname !== '/') {
