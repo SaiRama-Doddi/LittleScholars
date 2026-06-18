@@ -27,6 +27,8 @@ export default function Navbar() {
   // Lock body scroll when mobile menu is open to prevent horizontal shifting
   useEffect(() => {
     if (isOpen) {
+      document.documentElement.scrollLeft = 0
+      document.body.scrollLeft = 0
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
@@ -209,8 +211,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[9999] p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[9999] p-6 flex flex-col justify-between mobile-drawer ${
+          isOpen ? 'translate-x-0 visible' : 'translate-x-full invisible'
         }`}
       >
         <div>

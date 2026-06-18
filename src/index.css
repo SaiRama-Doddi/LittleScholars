@@ -5,6 +5,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
   }
 
   /* Force Source Sans 3 (Source Sans Variable) across the entire website */
@@ -118,4 +122,8 @@
   animation: flame-pulse 1.3s ease-in-out infinite;
   transform-origin: bottom center;
   display: inline-block;
+}
+
+.mobile-drawer {
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), visibility 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }

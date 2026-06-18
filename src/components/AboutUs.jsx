@@ -65,7 +65,7 @@ export default function AboutUs() {
           {/* Right: Content */}
           <div className="flex flex-col justify-between gap-y-6 lg:gap-y-0 lg:h-[450px] py-1">
             <div>
-              <span className="text-base font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-4 py-2 rounded-md border border-brand-yellow/30">
+              <span className="inline-block text-base font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-4 py-2 rounded-md border border-brand-yellow/30">
                 About Us
               </span>
               <h2 className="text-4xl md:text-[52px] font-fredoka font-bold text-brand-blue mt-5 leading-tight md:leading-[1.1]">

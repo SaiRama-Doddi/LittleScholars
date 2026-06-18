@@ -50,7 +50,7 @@ export default function Testimonials() {
           {/* Left Side: Testimonials Slider */}
           <div className="flex flex-col space-y-6">
             <div>
-              <span className="text-sm font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-3 py-1.5 rounded-md border border-brand-yellow/30">
+              <span className="inline-block text-sm font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-3 py-1.5 rounded-md border border-brand-yellow/30">
                 Parent Testimonials
               </span>
               <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-4 leading-tight">

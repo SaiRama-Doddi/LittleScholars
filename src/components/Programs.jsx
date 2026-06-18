@@ -95,11 +95,11 @@ export default function Programs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
-          <span className="text-sm md:text-base font-bold text-[#fab818] tracking-widest uppercase">
+        <div className="text-left max-w-5xl mb-12 md:mb-16">
+          <span className="inline-block text-base md:text-lg font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-4 py-2 rounded-md border border-brand-yellow/30">
             Our Programs
           </span>
-          <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-3 leading-tight tracking-tight">
+          <h2 className="text-2xl md:text-4xl font-fredoka font-bold text-brand-blue mt-5 leading-tight tracking-tight">
             Programs Designed For Every Stage Of Your Child’s Growth
           </h2>
         </div>
