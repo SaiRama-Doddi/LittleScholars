@@ -1,128 +1,134 @@
-import { Heart, Compass, Lightbulb, BookOpen, Baby, Calendar } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import programDaycare from '../assets/program_daycare.png'
+import programPlaygroup from '../assets/program_playgroup.png'
+import programNursery from '../assets/program_nursery.png'
+import programJuniorKG from '../assets/program_juniorkg.png'
+import programSeniorKG from '../assets/program_seniorkg.png'
+
+// Custom handdrawn-style SVG doodles to match the mockup
+const StarDoodle = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499c.196-.612 1.04-.612 1.236 0l2.122 6.529a1 1 0 00.95.69h6.862c.643 0 .91.824.412 1.236l-5.553 4.035a1 1 0 00-.363 1.118l2.12 6.53c.197.612-.507 1.127-1.018.72l-5.553-4.036a1 1 0 00-1.175 0l-5.553 4.036c-.51.407-1.215-.108-1.018-.72l2.12-6.53a1 1 0 00-.362-1.118L2.05 11.954c-.498-.412-.232-1.236.875-1.236h6.862a1 1 0 00.95-.69L11.48 3.5z" />
+  </svg>
+)
+
+const AirplaneDoodle = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+  </svg>
+)
+
+const PencilDoodle = ({ className }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.83 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+  </svg>
+)
 
 export default function Programs() {
   const programList = [
     {
       title: 'Day Care',
-      age: '1.5 - 3 Years',
       desc: 'A safe and caring space where children feel comfortable, secure and loved.',
-      icon: <Heart className="w-8 h-8 text-pink-500" />,
-      colorClass: 'bg-pink-50/70 border-pink-100 text-pink-700',
-      badgeBg: 'bg-pink-100 text-pink-800',
-      iconBg: 'bg-pink-100',
+      image: programDaycare,
+      colorClass: 'bg-[#fff5f6] border-[#ffe3e5] hover:shadow-pink-100/50 hover:border-pink-200',
     },
     {
       title: 'Play Group',
-      age: '2 - 3 Years',
       desc: 'Fun-filled activities that encourage play, social skills and early learning.',
-      icon: <Baby className="w-8 h-8 text-emerald-500" />,
-      colorClass: 'bg-emerald-50/70 border-emerald-100 text-emerald-700',
-      badgeBg: 'bg-emerald-100 text-emerald-800',
-      iconBg: 'bg-emerald-100',
+      image: programPlaygroup,
+      colorClass: 'bg-[#f4fbf7] border-[#e1f5e7] hover:shadow-emerald-100/50 hover:border-emerald-200',
     },
     {
       title: 'Nursery',
-      age: '3 - 4 Years',
       desc: 'Building strong basics through structured learning and exciting experiences.',
-      icon: <Lightbulb className="w-8 h-8 text-amber-500" />,
-      colorClass: 'bg-amber-50/70 border-amber-100 text-amber-700',
-      badgeBg: 'bg-amber-100 text-amber-800',
-      iconBg: 'bg-amber-100',
+      image: programNursery,
+      colorClass: 'bg-[#fffbf0] border-[#fef3d6] hover:shadow-amber-100/50 hover:border-amber-200',
     },
     {
       title: 'Junior KG',
-      age: '4 - 5 Years',
       desc: 'Encouraging curiosity, creativity and independence in young learners.',
-      icon: <Compass className="w-8 h-8 text-sky-500" />,
-      colorClass: 'bg-sky-50/70 border-sky-100 text-sky-700',
-      badgeBg: 'bg-sky-100 text-sky-800',
-      iconBg: 'bg-sky-100',
+      image: programJuniorKG,
+      colorClass: 'bg-[#f0f7ff] border-[#e0efff] hover:shadow-blue-100/50 hover:border-blue-200',
     },
     {
       title: 'Senior KG',
-      age: '5 - 6 Years',
       desc: 'Preparing children for the future with skills, confidence and knowledge.',
-      icon: <BookOpen className="w-8 h-8 text-indigo-500" />,
-      colorClass: 'bg-indigo-50/70 border-indigo-100 text-indigo-700',
-      badgeBg: 'bg-indigo-100 text-indigo-800',
-      iconBg: 'bg-indigo-100',
+      image: programSeniorKG,
+      colorClass: 'bg-[#fffbf2] border-[#fef3db] hover:shadow-orange-100/40 hover:border-orange-200',
     },
   ]
 
   return (
-    <section id="programs" className="py-16 md:py-24 bg-slate-50 font-outfit relative overflow-hidden">
+    <section id="programs" className="py-20 md:py-28 bg-gradient-to-b from-[#f8fbff] to-white font-outfit relative overflow-hidden">
       
-      {/* Background doodles */}
-      <div className="absolute top-20 right-10 w-24 h-24 bg-brand-yellow/10 rounded-full blur-xl pointer-events-none" />
-      <div className="absolute bottom-20 left-10 w-32 h-32 bg-brand-orange/10 rounded-full blur-xl pointer-events-none" />
+      {/* Background handdrawn doodles to match the mockup */}
+      <StarDoodle className="absolute top-[8%] left-[3%] text-brand-yellow/30 opacity-70 w-12 h-12 hidden lg:block animate-float-drift-1" />
+      <AirplaneDoodle className="absolute top-[12%] left-[16%] text-sky-300/30 opacity-70 w-10 h-10 hidden lg:block animate-float-drift-2" />
+      <StarDoodle className="absolute top-[16%] right-[18%] text-brand-yellow/25 opacity-70 w-8 h-8 hidden lg:block animate-float-drift-3" />
+      <AirplaneDoodle className="absolute top-[8%] right-[4%] text-brand-yellow/30 opacity-70 w-12 h-12 hidden lg:block animate-float-drift-1" />
+      
+      <PencilDoodle className="absolute top-[48%] left-[1.5%] text-blue-300/30 opacity-70 w-12 h-12 hidden lg:block animate-float-drift-3" />
+      <StarDoodle className="absolute bottom-[10%] left-[3.5%] text-pink-300/30 opacity-70 w-10 h-10 hidden lg:block animate-float-drift-2" />
+      
+      <div className="absolute top-[52%] right-[2%] text-purple-300/35 opacity-70 w-10 h-10 hidden lg:block animate-float-drift-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        </svg>
+      </div>
+      <StarDoodle className="absolute bottom-[15%] right-[3.5%] text-sky-300/30 opacity-70 w-10 h-10 hidden lg:block animate-float-drift-3" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-3 py-1.5 rounded-md border border-brand-yellow/30">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
+          <span className="text-sm md:text-base font-bold text-[#fab818] tracking-widest uppercase">
             Our Programs
           </span>
-          <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-4 leading-tight">
-            Programs Designed For Every Stage <br />
-            <span className="text-brand-orange">Of Your Child's Growth</span>
+          <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-3 leading-tight tracking-tight">
+            Programs Designed For Every Stage Of Your Child’s Growth
           </h2>
-          <div className="w-24 h-1 bg-brand-yellow mx-auto mt-4 rounded-full" />
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-8 mb-16">
           {programList.map((prog, index) => (
             <div
               key={index}
-              className={`flex flex-col justify-between border-2 rounded-3xl p-6 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl ${prog.colorClass} group bg-white`}
+              className={`flex flex-col items-center text-center border rounded-3xl p-6 pt-10 pb-10 transition-all duration-500 transform hover:-translate-y-3.5 hover:shadow-2xl ${prog.colorClass} bg-white relative overflow-hidden`}
             >
-              <div>
-                {/* Icon Container */}
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-inner ${prog.iconBg} group-hover:scale-110 transition-transform duration-300`}>
-                  {prog.icon}
-                </div>
+              {/* Soft decorative background bubble */}
+              <div className="absolute -top-10 -left-10 w-24 h-24 bg-white/20 rounded-full blur-xl pointer-events-none" />
 
-                {/* Badge */}
-                <div className="mb-2">
-                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold font-fredoka uppercase tracking-wider ${prog.badgeBg}`}>
-                    <Calendar className="w-3 h-3 mr-1" />
-                    {prog.age}
-                  </span>
-                </div>
-
-                {/* Program Title */}
-                <h3 className="text-xl font-bold font-fredoka text-slate-800 mb-3 group-hover:text-brand-blue transition-colors">
-                  {prog.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-slate-600 text-sm leading-relaxed font-light mb-6">
-                  {prog.desc}
-                </p>
+              {/* 3D Toy Illustration Container */}
+              <div className="w-24 h-24 mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src={prog.image} 
+                  alt={prog.title} 
+                  className="max-w-full max-h-full object-contain filter drop-shadow-md" 
+                />
               </div>
 
-              {/* Card Footer Link */}
-              <div className="pt-2">
-                <a
-                  href="#contact"
-                  className="text-xs font-bold tracking-wider uppercase flex items-center group-hover:underline text-slate-700 hover:text-brand-blue transition-colors"
-                >
-                  Enroll Interest &rarr;
-                </a>
-              </div>
+              {/* Program Title */}
+              <h3 className="text-xl font-bold font-fredoka text-brand-blue mb-4">
+                {prog.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-slate-600 text-sm leading-relaxed font-light">
+                {prog.desc}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Bottom Call To Action */}
-        <div className="text-center mt-12">
-          <a
-            href="#contact"
-            className="inline-block bg-brand-blue hover:bg-brand-orange text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-fredoka"
+        <div className="text-center">
+          <Link
+            to="/admissions"
+            className="inline-block bg-[#0c2b5c] hover:bg-brand-orange text-white font-fredoka font-semibold px-10 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-base"
           >
             View All Programs
-          </a>
+          </Link>
         </div>
 
       </div>
