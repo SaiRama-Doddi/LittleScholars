@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section id="facilities" className="py-16 md:py-24 bg-white font-outfit relative overflow-hidden">
+    <section id="facilities" className="py-16 md:py-24 bg-white font-outfit relative overflow-hidden scroll-mt-28">
       
       {/* Decorative backdrop blobs */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-indigo-50/50 rounded-full blur-3xl pointer-events-none" />

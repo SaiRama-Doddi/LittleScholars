@@ -26,7 +26,7 @@ export default function AboutUs() {
   ]
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden font-outfit">
+    <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden font-outfit scroll-mt-28">
       
       {/* Decorative SVGs */}
       <div className="absolute top-10 left-5 text-brand-yellow/10 pointer-events-none select-none">

@@ -30,36 +30,36 @@ export default function Programs() {
       title: 'Day Care',
       desc: 'A safe and caring space where children feel comfortable, secure and loved.',
       image: programDaycare,
-      colorClass: 'bg-[#fff5f6] border-[#ffe3e5] hover:shadow-pink-100/50 hover:border-pink-200',
+      colorClass: 'bg-[#fff5f6] border-pink-200/90 hover:shadow-pink-100/60 hover:border-pink-300',
     },
     {
       title: 'Play Group',
       desc: 'Fun-filled activities that encourage play, social skills and early learning.',
       image: programPlaygroup,
-      colorClass: 'bg-[#f4fbf7] border-[#e1f5e7] hover:shadow-emerald-100/50 hover:border-emerald-200',
+      colorClass: 'bg-[#f4fbf7] border-emerald-200/90 hover:shadow-emerald-100/60 hover:border-emerald-300',
     },
     {
       title: 'Nursery',
       desc: 'Building strong basics through structured learning and exciting experiences.',
       image: programNursery,
-      colorClass: 'bg-[#fffbf0] border-[#fef3d6] hover:shadow-amber-100/50 hover:border-amber-200',
+      colorClass: 'bg-[#fffbf0] border-amber-200/90 hover:shadow-amber-100/60 hover:border-amber-300',
     },
     {
       title: 'Junior KG',
       desc: 'Encouraging curiosity, creativity and independence in young learners.',
       image: programJuniorKG,
-      colorClass: 'bg-[#f0f7ff] border-[#e0efff] hover:shadow-blue-100/50 hover:border-blue-200',
+      colorClass: 'bg-[#f0f7ff] border-blue-200/90 hover:shadow-blue-100/60 hover:border-blue-300',
     },
     {
       title: 'Senior KG',
       desc: 'Preparing children for the future with skills, confidence and knowledge.',
       image: programSeniorKG,
-      colorClass: 'bg-[#fffbf2] border-[#fef3db] hover:shadow-orange-100/40 hover:border-orange-200',
+      colorClass: 'bg-[#fffbf2] border-orange-200/90 hover:shadow-orange-100/50 hover:border-orange-300',
     },
   ]
 
   return (
-    <section id="programs" className="py-20 md:py-28 bg-gradient-to-b from-[#f8fbff] to-white font-outfit relative overflow-hidden">
+    <section id="programs" className="py-20 md:py-28 bg-gradient-to-b from-[#f8fbff] to-white font-outfit relative overflow-hidden scroll-mt-28">
       
       {/* Background handdrawn doodles to match the mockup */}
       <StarDoodle className="absolute top-[8%] left-[3%] text-brand-yellow/30 opacity-70 w-12 h-12 hidden lg:block animate-float-drift-1" />
@@ -109,14 +109,23 @@ export default function Programs() {
               </div>
 
               {/* Program Title */}
-              <h3 className="text-xl font-bold font-fredoka text-brand-blue mb-4">
+              <h3 className="text-xl font-bold font-fredoka text-brand-blue mb-3">
                 {prog.title}
               </h3>
 
               {/* Description */}
-              <p className="text-slate-600 text-sm leading-relaxed font-light">
+              <p className="text-slate-700 text-sm leading-relaxed font-normal">
                 {prog.desc}
               </p>
+
+              {/* View Details Link */}
+              <Link
+                to="/admissions"
+                className="mt-6 text-xs font-bold uppercase tracking-wider text-[#0c2b5c] hover:text-brand-orange transition-colors flex items-center space-x-1"
+              >
+                <span>View Details</span>
+                <span>&rarr;</span>
+              </Link>
             </div>
           ))}
         </div>
