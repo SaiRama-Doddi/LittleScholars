@@ -2,21 +2,21 @@ import { Phone, Mail } from 'lucide-react'
 
 export default function TopBar() {
   return (
-    <div className="bg-brand-blue text-white py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-sm border-b border-white/10 font-outfit">
+    <div className="bg-brand-blue text-white py-1.5 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center border-b border-white/10 font-outfit">
       {/* Contact Details */}
-      <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
-        <a href="tel:9492848489" className="flex items-center hover:text-brand-yellow transition-colors duration-200">
-          <Phone className="w-4 h-4 mr-2 text-brand-yellow" />
+      <div className="flex flex-row flex-wrap justify-center items-center gap-x-4 gap-y-1 text-center text-[10.5px] sm:text-sm">
+        <a href="tel:9492848489" className="flex items-center hover:text-brand-yellow transition-colors duration-200 whitespace-nowrap">
+          <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-brand-yellow flex-shrink-0" />
           <span className="font-semibold">9492 8484 89 / 9491 7373 99</span>
         </a>
-        <a href="mailto:littlescholarsips@gmail.com" className="flex items-center hover:text-brand-yellow transition-colors duration-200">
-          <Mail className="w-4 h-4 mr-2 text-brand-yellow" />
+        <a href="mailto:littlescholarsips@gmail.com" className="flex items-center hover:text-brand-yellow transition-colors duration-200 whitespace-nowrap">
+          <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-2 text-brand-yellow flex-shrink-0" />
           <span>littlescholarsips@gmail.com</span>
         </a>
       </div>
 
-      {/* Social Icons */}
-      <div className="flex items-center space-x-4 mt-2 md:mt-0">
+      {/* Social Icons - Hidden on mobile, shown on tablet/desktop */}
+      <div className="hidden sm:flex items-center space-x-4 mt-2 md:mt-0">
         <a 
           href="https://facebook.com" 
           target="_blank" 

@@ -222,7 +222,7 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className={`font-semibold text-lg py-2 border-b border-slate-100 transition-colors font-outfit ${
+                  className={`font-semibold text-base py-2 border-b border-slate-100 transition-colors font-outfit ${
                     active ? 'text-brand-orange' : 'text-brand-blue hover:text-brand-orange'
                   }`}
                 >

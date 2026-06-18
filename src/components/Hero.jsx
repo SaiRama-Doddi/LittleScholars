@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Phone, MapPin } from 'lucide-react'
-import banner2 from '../assets/banner2.webp'
-import banner3 from '../assets/banner3.webp'
 
 export default function Hero() {
-  const banners = [banner2, banner3]
+  const banners = ['/banner2.webp', '/banner3.webp']
   const [currentSlide, setCurrentSlide] = useState(0)
 
   // Autoplay functionality
@@ -26,7 +24,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative bg-[#f0f7ff] overflow-hidden">
       {/* Slider Wrapper - Perfectly responsive aspect ratio */}
-      <div className="relative w-full aspect-[1.35/1] sm:aspect-[1.8/1] md:aspect-[2.45/1] overflow-hidden">
+      <div className="relative w-full aspect-[2/1] sm:aspect-[2.1/1] md:aspect-[2.45/1] overflow-hidden">
         {banners.map((banner, index) => (
           <div
             key={index}
@@ -39,6 +37,7 @@ export default function Hero() {
               alt={`Preschool Banner ${index + 1}`}
               className="w-full h-full object-cover object-top"
               loading={index === 0 ? 'eager' : 'lazy'}
+              fetchpriority={index === 0 ? 'high' : 'low'}
             />
           </div>
         ))}

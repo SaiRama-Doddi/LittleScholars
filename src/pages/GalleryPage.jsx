@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Grid, Sparkles, BookOpen, Calendar, ToyBrick, GraduationCap, Smile, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Import gallery banner
-import galleryBannerImg from '../assets/banner1.webp'
+const galleryBannerImg = '/banner1.webp'
 
 // Import gallery images
 import imgDrawing from '../assets/gallery_art.webp'
@@ -164,6 +164,8 @@ export default function GalleryPage() {
           src={galleryBannerImg}
           alt="Little Scholars Gallery Banner"
           className="w-full h-full object-cover object-top"
+          loading="eager"
+          fetchpriority="high"
         />
         {/* Overlay gradient mask to guarantee text contrast if banner text is overlayed, 
             though the provided banner contains baked-in graphics. */}
