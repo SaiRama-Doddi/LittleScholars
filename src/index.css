@@ -7,8 +7,8 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-fredoka, .font-playfair {
-    font-family: 'Playfair Display', serif !important;
+  h1, h2, h3, h4, h5, h6, .font-fredoka, .font-playfair, .font-outfit {
+    font-family: 'Source Sans 3', sans-serif !important;
     font-weight: 500 !important;
   }
 
