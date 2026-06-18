@@ -14,7 +14,8 @@ export default {
         }
       },
       fontFamily: {
-        fredoka: ['Fredoka', 'sans-serif'],
+        fredoka: ['"Playfair Display"', 'serif'],
+        playfair: ['"Playfair Display"', 'serif'],
         outfit: ['Outfit', 'sans-serif'],
       }
     },

@@ -6,6 +6,16 @@
   html {
     scroll-behavior: smooth;
   }
+
+  h1, h2, h3, h4, h5, h6, .font-fredoka, .font-playfair {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 500 !important;
+  }
+
+  /* Soften bold utility weights across the entire site */
+  .font-bold, .font-semibold, .font-extrabold, .font-black {
+    font-weight: 500 !important;
+  }
 }
 
 @keyframes float {
