@@ -7,12 +7,14 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-fredoka, .font-playfair, .font-outfit {
+  /* Force Source Sans 3 (Source Sans Variable) across the entire website */
+  *, *::before, *::after {
     font-family: 'Source Sans 3', sans-serif !important;
-    font-weight: 500 !important;
   }
 
-  /* Soften bold utility weights across the entire site */
+  /* Soften bold weights across the entire website (no bold letters) */
+  h1, h2, h3, h4, h5, h6,
+  strong, b, th,
   .font-bold, .font-semibold, .font-extrabold, .font-black {
     font-weight: 500 !important;
   }
