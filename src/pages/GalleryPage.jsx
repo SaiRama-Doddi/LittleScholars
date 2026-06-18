@@ -163,7 +163,7 @@ export default function GalleryPage() {
         <img
           src={galleryBannerImg}
           alt="Little Scholars Gallery Banner"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-top"
         />
         {/* Overlay gradient mask to guarantee text contrast if banner text is overlayed, 
             though the provided banner contains baked-in graphics. */}

@@ -37,7 +37,7 @@ export default function Hero() {
             <img
               src={banner}
               alt={`Preschool Banner ${index + 1}`}
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-top"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
           </div>
