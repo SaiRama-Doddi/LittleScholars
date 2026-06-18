@@ -29,37 +29,47 @@ export default function Programs() {
     {
       id: 'day-care',
       title: 'Day Care',
+      age: '1.5 - 5 Years',
       desc: 'A safe and caring space where children feel comfortable, secure and loved.',
       image: programDaycare,
       colorClass: 'bg-[#fff5f6] border-pink-200/90 hover:shadow-pink-100/60 hover:border-pink-300',
+      badgeColor: 'bg-pink-100 text-pink-700 border-pink-200',
     },
     {
       id: 'play-group',
       title: 'Play Group',
+      age: '1.5 - 3 Years',
       desc: 'Fun-filled activities that encourage play, social skills and early learning.',
       image: programPlaygroup,
       colorClass: 'bg-[#f4fbf7] border-emerald-200/90 hover:shadow-emerald-100/60 hover:border-emerald-300',
+      badgeColor: 'bg-emerald-100 text-emerald-700 border-emerald-200',
     },
     {
       id: 'nursery',
       title: 'Nursery',
+      age: '3+ Years',
       desc: 'Building strong basics through structured learning and exciting experiences.',
       image: programNursery,
       colorClass: 'bg-[#fffbf0] border-amber-200/90 hover:shadow-amber-100/60 hover:border-amber-300',
+      badgeColor: 'bg-amber-100 text-amber-700 border-amber-200',
     },
     {
       id: 'junior-kg',
       title: 'Junior KG',
+      age: '4+ Years',
       desc: 'Encouraging curiosity, creativity and independence in young learners.',
       image: programJuniorKG,
       colorClass: 'bg-[#f0f7ff] border-blue-200/90 hover:shadow-blue-100/60 hover:border-blue-300',
+      badgeColor: 'bg-blue-100 text-blue-700 border-blue-200',
     },
     {
       id: 'senior-kg',
       title: 'Senior KG',
+      age: '5+ Years',
       desc: 'Preparing children for the future with skills, confidence and knowledge.',
       image: programSeniorKG,
       colorClass: 'bg-[#fffbf2] border-orange-200/90 hover:shadow-orange-100/50 hover:border-orange-300',
+      badgeColor: 'bg-orange-100 text-orange-700 border-orange-200',
     },
   ]
 
@@ -97,15 +107,16 @@ export default function Programs() {
         {/* Programs Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-8 mb-16">
           {programList.map((prog, index) => (
-            <div
+            <Link
               key={index}
-              className={`flex flex-col items-center text-center border rounded-3xl p-6 pt-10 pb-10 transition-all duration-500 transform hover:-translate-y-3.5 hover:shadow-2xl ${prog.colorClass} bg-white relative overflow-hidden`}
+              to={`/programs/${prog.id}`}
+              className={`flex flex-col items-center text-center border-2 rounded-3xl p-6 pt-8 pb-8 transition-all duration-500 transform hover:-translate-y-3.5 hover:shadow-2xl shadow-md ${prog.colorClass} relative overflow-hidden group cursor-pointer border-slate-100/80`}
             >
               {/* Soft decorative background bubble */}
               <div className="absolute -top-10 -left-10 w-24 h-24 bg-white/20 rounded-full blur-xl pointer-events-none" />
 
               {/* 3D Toy Illustration Container */}
-              <div className="w-24 h-24 mb-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-24 h-24 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <img 
                   src={prog.image} 
                   alt={prog.title} 
@@ -113,25 +124,29 @@ export default function Programs() {
                 />
               </div>
 
+              {/* Age Pill Badge */}
+              <span className={`text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full border ${prog.badgeColor} mb-4 shadow-sm inline-block`}>
+                {prog.age}
+              </span>
+
               {/* Program Title */}
-              <h3 className="text-xl font-bold font-fredoka text-brand-blue mb-3">
+              <h3 className="text-xl font-bold font-fredoka text-brand-blue mb-2.5 group-hover:text-brand-orange transition-colors">
                 {prog.title}
               </h3>
 
               {/* Description */}
-              <p className="text-black text-sm leading-relaxed font-normal">
+              <p className="text-black text-xs md:text-sm leading-relaxed font-medium mb-6">
                 {prog.desc}
               </p>
 
               {/* View Details Link */}
-              <Link
-                to={`/programs/${prog.id}`}
-                className="mt-6 text-xs font-bold uppercase tracking-wider text-[#0c2b5c] hover:text-brand-orange transition-colors flex items-center space-x-1"
+              <span
+                className="mt-auto text-xs font-bold uppercase tracking-wider text-[#0c2b5c] group-hover:text-brand-orange transition-colors flex items-center space-x-1"
               >
                 <span>View Details</span>
-                <span>&rarr;</span>
-              </Link>
-            </div>
+                <span className="transform group-hover:translate-x-1.5 transition-transform">&rarr;</span>
+              </span>
+            </Link>
           ))}
         </div>
 

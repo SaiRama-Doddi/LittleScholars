@@ -75,3 +75,24 @@
 .animate-page-fade {
   animation: pageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@keyframes bell-swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+}
+.animate-bell-swing {
+  animation: bell-swing 2.2s ease-in-out infinite;
+  transform-origin: top center;
+  display: inline-block;
+}
+
+@keyframes flame-pulse {
+  0%, 100% { transform: scale(1) translateY(0); opacity: 0.9; }
+  50% { transform: scale(1.15) translateY(-2px); opacity: 1; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.7)); }
+}
+.animate-flame-pulse {
+  animation: flame-pulse 1.3s ease-in-out infinite;
+  transform-origin: bottom center;
+  display: inline-block;
+}

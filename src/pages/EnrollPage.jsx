@@ -258,11 +258,11 @@ export default function EnrollPage() {
                         className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-xl py-3 pl-11 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:outline-none transition-colors appearance-none cursor-pointer"
                       >
                         <option value="" disabled>Select Program</option>
-                        <option value="daycare">Day Care (1 - 2.5 Years)</option>
-                        <option value="playgroup">Play Group (1.5 - 2.5 Years)</option>
-                        <option value="nursery">Nursery (2.5 - 3.5 Years)</option>
-                        <option value="junior-kg">Junior KG (3.5 - 4.5 Years)</option>
-                        <option value="senior-kg">Senior KG (4.5 - 5.5 Years)</option>
+                        <option value="daycare">Day Care (1.5 - 5 Years)</option>
+                        <option value="playgroup">Play Group (1.5 - 3 Years)</option>
+                        <option value="nursery">Nursery (3+ Years)</option>
+                        <option value="junior-kg">Junior KG (4+ Years)</option>
+                        <option value="senior-kg">Senior KG (5+ Years)</option>
                       </select>
                       <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
                         <ChevronRight className="w-4 h-4 rotate-90" />

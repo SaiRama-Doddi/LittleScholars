@@ -49,9 +49,9 @@ const programsData = {
     name: 'DAY CARE',
     titleName: 'Day Care',
     subtitle: 'A Safe, Nurturing & Loving Second Home',
-    desc: 'Our Day Care program is designed for children aged 1.5 to 3 years. We provide a clean, secure, and warm environment where toddlers can play, rest, and take their first steps of growth under the guidance of loving caregivers.',
-    age: '1.5 - 3 Years',
-    duration: 'Full/Half Day',
+    desc: 'Our Day Care program is designed for children aged 1.5 to 5 years. We provide a clean, secure, and warm environment where toddlers can play, rest, and take their first steps of growth under the guidance of loving caregivers.',
+    age: '1.5 - 5 Years',
+    duration: '09:00 AM - 03:00 PM',
     size: '10-12 Children',
     heroImage: paintedHandsChild,
     typicalImage: motherChild,
@@ -77,11 +77,11 @@ const programsData = {
       { time: '09:00 AM', event: 'Welcome & Morning Health Check' },
       { time: '09:30 AM', event: 'Guided Play & Sensory Activities' },
       { time: '10:15 AM', event: 'Healthy Snack Time' },
-      { time: '10:45 AM', event: 'Nap Time / Rest Period' },
+      { time: '10:45 AM', event: 'Outdoor Stroller Walk / Light Play' },
       { time: '12:00 PM', event: 'Lunch Time' },
-      { time: '01:00 PM', event: 'Outdoor Stroller Walk / Light Play' },
-      { time: '02:00 PM', event: 'Story Time & Quiet Play' },
-      { time: '03:00 PM', event: 'Parent Handover' }
+      { time: '01:00 PM', event: 'Story Time & Quiet Play' },
+      { time: '01:30 PM', event: 'Nap Time / Rest Period (1:30 PM - 3:00 PM)' },
+      { time: '03:00 PM', event: 'Parent Handover / Pick-up Time' }
     ],
     approach: [
       'Low child-to-teacher ratio for direct care',
@@ -96,9 +96,9 @@ const programsData = {
     name: 'PLAY GROUP',
     titleName: 'Play Group',
     subtitle: 'A Joyful Start to Lifelong Learning',
-    desc: 'Our Play Group program is designed for children aged 2.5 to 3.5 years. It focuses on hands-on learning through play, exploration and social interaction in a safe and nurturing environment.',
-    age: '2.5 - 3.5 Years',
-    duration: '3 Hours',
+    desc: 'Our Play Group program is designed for children aged 1.5 to 3 years. It focuses on hands-on learning through play, exploration and social interaction in a safe and nurturing environment.',
+    age: '1.5 - 3 Years',
+    duration: '09:00 AM - 12:30 PM',
     size: '15-18 Children',
     heroImage: detailsPlaygroupHero,
     typicalImage: detailsPlaygroupTypical,
@@ -121,14 +121,11 @@ const programsData = {
       { title: 'Creative Development', desc: 'Art, music, role play and creative play to inspire imagination and creativity.', color: 'border-orange-200 bg-[#fffbf2]', Icon: Palette }
     ],
     typicalDay: [
-      { time: '09:00 AM', event: 'Welcome & Free Play' },
+      { time: '09:00 AM', event: 'Welcome & Warm Up Activities' },
       { time: '09:30 AM', event: 'Circle Time & Rhymes' },
-      { time: '10:00 AM', event: 'Theme Based Learning Activity' },
-      { time: '10:45 AM', event: 'Snack Break' },
-      { time: '11:00 AM', event: 'Indoor / Outdoor Play' },
-      { time: '11:45 AM', event: 'Story Time' },
-      { time: '12:15 PM', event: 'Creative Activity' },
-      { time: '12:45 PM', event: 'Good Bye Circle' }
+      { time: '10:00 AM', event: 'Snack Break' },
+      { time: '10:30 AM', event: 'Story & Theme Based Activity' },
+      { time: '11:30 AM', event: 'Outdoor Play & Goodbye / Parent Pick-up' }
     ],
     approach: [
       'Play Based Learning',
@@ -143,9 +140,9 @@ const programsData = {
     name: 'NURSERY',
     titleName: 'Nursery',
     subtitle: 'Building Strong Foundations for Growth',
-    desc: 'Our Nursery program is designed for children aged 3 to 4 years. It focuses on academic readiness, structured learning, and interactive play, helping children develop cognitive and motor skills.',
-    age: '3 - 4 Years',
-    duration: '3.5 Hours',
+    desc: 'Our Nursery program is designed for children aged 3+ years. It focuses on academic readiness, structured learning, and interactive play, helping children develop cognitive and motor skills.',
+    age: '3+ Years',
+    duration: '09:00 AM - 12:30 PM',
     size: '18-20 Children',
     heroImage: galleryLearning,
     typicalImage: galTeacher,
@@ -171,11 +168,11 @@ const programsData = {
       { time: '09:00 AM', event: 'Assembly & Warm Up' },
       { time: '09:20 AM', event: 'Language & Phonics Lesson' },
       { time: '10:00 AM', event: 'Math & Logic Exercises' },
-      { time: '10:45 AM', event: 'Recess & Snack Time' },
-      { time: '11:15 AM', event: 'Creative Art & Clay Play' },
-      { time: '12:00 PM', event: 'EVS / Science Exploration' },
-      { time: '12:30 PM', event: 'Music & Storytelling' },
-      { time: '01:00 PM', event: 'Goodbye Routine' }
+      { time: '10:35 AM', event: 'Recess & Snack Time' },
+      { time: '11:00 AM', event: 'Creative Art & Clay Play' },
+      { time: '11:30 AM', event: 'EVS / Science Exploration' },
+      { time: '12:00 PM', event: 'Music & Storytelling' },
+      { time: '12:30 PM', event: 'Goodbye Routine & Parent Pick-up' }
     ],
     approach: [
       'Syllable and phonics-first learning model',
@@ -190,9 +187,9 @@ const programsData = {
     name: 'JUNIOR KG',
     titleName: 'Junior KG',
     subtitle: 'Nurturing Curiosity and Independent Thinking',
-    desc: 'Our Junior KG program is designed for children aged 4 to 5 years. It balances advanced academic concepts with curiosity, creativity, and self-confidence, ensuring school readiness.',
-    age: '4 - 5 Years',
-    duration: '4 Hours',
+    desc: 'Our Junior KG program is designed for children aged 4+ years. It balances advanced academic concepts with curiosity, creativity, and self-confidence, ensuring school readiness.',
+    age: '4+ Years',
+    duration: '09:00 AM - 03:30 PM',
     size: '20-22 Children',
     heroImage: galleryArt,
     typicalImage: galGrad,
@@ -215,14 +212,15 @@ const programsData = {
       { title: 'Fine Arts & Drama', desc: 'Role plays, puppet theater, water coloring, and crafts.', color: 'border-orange-200 bg-[#fffbf2]', Icon: Palette }
     ],
     typicalDay: [
-      { time: '08:30 AM', event: 'Morning Circle & News Sharing' },
-      { time: '09:00 AM', event: 'Literacy & English Writing' },
-      { time: '09:50 AM', event: 'Math & Logical Reasoning' },
-      { time: '10:30 AM', event: 'Outdoor Physical Play' },
-      { time: '11:00 AM', event: 'Lunch / Snack Break' },
-      { time: '11:30 AM', event: 'Science Experiment / EVS' },
-      { time: '12:10 PM', event: 'Computer/Audio-Visual Lab' },
-      { time: '12:30 PM', event: 'Reflection & Goodbye' }
+      { time: '09:00 AM', event: 'Morning Circle & News Sharing' },
+      { time: '09:30 AM', event: 'Literacy & English Writing' },
+      { time: '10:30 AM', event: 'Math & Logical Reasoning' },
+      { time: '11:15 AM', event: 'Outdoor Physical Play' },
+      { time: '12:00 PM', event: 'Lunch / Snack Break' },
+      { time: '01:00 PM', event: 'Science Experiment / EVS' },
+      { time: '02:00 PM', event: 'Computer & Audio-Visual Lab' },
+      { time: '03:00 PM', event: 'Creative Arts & Reflection' },
+      { time: '03:30 PM', event: 'Reflection & Goodbye / Pick-up Time' }
     ],
     approach: [
       'Inquiry-led teaching approach',
@@ -237,9 +235,9 @@ const programsData = {
     name: 'SENIOR KG',
     titleName: 'Senior KG',
     subtitle: 'Preparing Confident Leaders of Tomorrow',
-    desc: 'Our Senior KG program is designed for children aged 5 to 6 years. It is a comprehensive transition program focused on primary school readiness, advanced math, language proficiency, and leadership.',
-    age: '5 - 6 Years',
-    duration: '4 Hours',
+    desc: 'Our Senior KG program is designed for children aged 5+ years. It is a comprehensive transition program focused on primary school readiness, advanced math, language proficiency, and leadership.',
+    age: '5+ Years',
+    duration: '09:00 AM - 03:30 PM',
     size: '22-25 Children',
     heroImage: galRead,
     typicalImage: aboutSchool,
@@ -262,14 +260,15 @@ const programsData = {
       { title: 'Creative Arts', desc: 'Advanced drawing, theater projects, singing, and complex crafts.', color: 'border-orange-200 bg-[#fffbf2]', Icon: Palette }
     ],
     typicalDay: [
-      { time: '08:30 AM', event: 'Morning Prayer & Assembly' },
-      { time: '09:00 AM', event: 'Comprehensive Literacy & Spelling' },
-      { time: '09:50 AM', event: 'Mathematics & Addition Lab' },
-      { time: '10:30 AM', event: 'Gymnastics / Yoga / Active Sports' },
-      { time: '11:00 AM', event: 'Snack Break & Social Time' },
-      { time: '11:30 AM', event: 'Social Studies / EVS Project' },
-      { time: '12:10 PM', event: 'Show & Tell (Public Speaking)' },
-      { time: '12:30 PM', event: 'Review & Closing Circle' }
+      { time: '09:00 AM', event: 'Morning Prayer & Assembly' },
+      { time: '09:30 AM', event: 'Comprehensive Literacy & Spelling' },
+      { time: '10:30 AM', event: 'Mathematics & Addition Lab' },
+      { time: '11:15 AM', event: 'Gymnastics / Yoga / Active Sports' },
+      { time: '12:00 PM', event: 'Snack Break & Social Time' },
+      { time: '01:00 PM', event: 'Social Studies / EVS Project' },
+      { time: '02:00 PM', event: 'Show & Tell (Public Speaking)' },
+      { time: '03:00 PM', event: 'Arts & Crafts Workshop' },
+      { time: '03:30 PM', event: 'Review & Goodbye / Pick-up Time' }
     ],
     approach: [
       'Comprehensive primary school prep focus',
@@ -292,6 +291,30 @@ const AirplaneDoodle = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
     <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
   </svg>
+)
+
+// Divine/God themed icons with animations for Saturday section
+const TempleBell = ({ className }) => (
+  <span className="animate-bell-swing inline-block">
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M12 2v2M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+      <circle cx="12" cy="17" r="1" fill="currentColor" />
+    </svg>
+  </span>
+)
+
+const DiyaFlame = ({ className }) => (
+  <div className="relative inline-block">
+    {/* Diya Base */}
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M4 12c0 4.4 3.6 8 8 8s8-3.6 8-8H4z" fill="#f59e0b" className="opacity-95" />
+      <path d="M12 12V8" stroke="#d97706" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+    {/* Animated flame floating above the wick */}
+    <svg className={`${className} absolute top-[-6px] left-[1px] text-brand-orange animate-flame-pulse`} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C11 4 10.5 5 10.5 6.5C10.5 8 11.2 9 12 9C12.8 9 13.5 8 13.5 6.5C13.5 5 13 4 12 2Z" />
+    </svg>
+  </div>
 )
 
 // Program themes mapping for dynamic styles
@@ -489,17 +512,19 @@ export default function ProgramDetailsPage() {
 
               {/* Info Badges */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-5 py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
-                  <div className={`${theme.badgeIconBg} p-2 rounded-xl ${theme.badgeIconColor}`}>
+                <div className={`flex items-center space-x-2.5 bg-white border-2 ${['day-care', 'play-group', 'nursery', 'junior-kg', 'senior-kg'].includes(programId) ? 'border-brand-orange bg-orange-50/20 md:scale-105 ring-2 ring-brand-orange/30 shadow-orange-100/40' : theme.badgeBorder} px-4 py-3 md:px-5 md:py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
+                  <div className={`${['day-care', 'play-group', 'nursery', 'junior-kg', 'senior-kg'].includes(programId) ? 'bg-brand-orange/20 text-brand-orange' : theme.badgeIconBg} p-2 rounded-xl ${theme.badgeIconColor}`}>
                     <Users className="w-5 h-5" />
                   </div>
                   <div className="text-left">
                     <div className="text-[10px] text-black font-bold uppercase tracking-wider">Age Group</div>
-                    <div className="text-xs md:text-sm font-bold text-brand-blue">{program.age}</div>
+                    <div className={`${['day-care', 'play-group', 'nursery', 'junior-kg', 'senior-kg'].includes(programId) ? 'text-sm md:text-base font-black text-brand-orange' : 'text-xs md:text-sm font-bold text-brand-blue'}`}>
+                      {program.age}
+                    </div>
                   </div>
                 </div>
 
-                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-5 py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
+                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-4 py-3 md:px-5 md:py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
                   <div className="bg-sky-50 p-2 rounded-xl text-sky-500">
                     <Clock className="w-5 h-5" />
                   </div>
@@ -509,7 +534,7 @@ export default function ProgramDetailsPage() {
                   </div>
                 </div>
 
-                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-5 py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
+                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-4 py-3 md:px-5 md:py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
                   <div className="bg-purple-50 p-2 rounded-xl text-purple-500">
                     <Baby className="w-5 h-5" />
                   </div>
@@ -743,6 +768,134 @@ export default function ProgramDetailsPage() {
             </div>
 
           </div>
+        </div>
+      </div>
+
+      {/* Saturday Special Section */}
+      <div className="py-16 bg-[#fcf8f2] border-y border-orange-100 relative overflow-hidden">
+        {/* Background blobs for playful aesthetics */}
+        <div className="absolute top-[-50px] right-[-50px] w-48 h-48 bg-amber-100/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-[-50px] left-[-50px] w-48 h-48 bg-orange-100/40 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="text-xs md:text-sm font-bold text-brand-orange tracking-widest uppercase bg-orange-50 border border-orange-200/60 px-4.5 py-1.5 rounded-full inline-block">
+              Saturday Special
+            </span>
+            <h2 className="text-3xl md:text-4xl font-fredoka font-bold text-brand-blue mt-4">
+              🎉 "No Bag Day" Saturday Program
+            </h2>
+            <p className="text-black text-xs md:text-sm font-semibold max-w-xl mx-auto mt-2 leading-relaxed">
+              Every Saturday, children leave their school bags at home to engage in a day of cultural enrichment, creative arts, and general knowledge development.
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            {/* Card 1: Spiritual & Cultural (Slokas & Hanuman Chalisa) */}
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50/50 border-2 border-amber-200/80 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden group">
+              <div className="absolute top-3 right-3 opacity-15 pointer-events-none">
+                <TempleBell className="w-24 h-24 text-amber-500" />
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3.5">
+                  <div className="w-14 h-14 rounded-2xl bg-amber-100/80 flex items-center justify-center shadow-inner text-brand-orange border border-amber-200">
+                    <TempleBell className="w-8 h-8" />
+                  </div>
+                  <div className="w-14 h-14 rounded-2xl bg-orange-100/80 flex items-center justify-center shadow-inner text-brand-orange border border-orange-200">
+                    <DiyaFlame className="w-8 h-8" />
+                  </div>
+                  <h3 className="font-fredoka text-xl font-bold text-brand-blue">
+                    Spiritual & Cultural Learning
+                  </h3>
+                </div>
+
+                <p className="text-black text-xs md:text-sm font-semibold leading-relaxed pt-2">
+                  Building deep moral roots and cultural awareness. Every Saturday, children learn and recite:
+                </p>
+
+                <ul className="space-y-3 pt-2">
+                  <li className="flex items-center space-x-3 text-xs md:text-sm text-black font-semibold">
+                    <div className="w-6 h-6 rounded-full bg-amber-500 text-white flex items-center justify-center text-[10px] font-bold shadow-sm animate-pulse">
+                      🕉️
+                    </div>
+                    <span className="text-brand-orange font-bold text-sm md:text-base">Sanskrit Slokas Recitation</span>
+                  </li>
+                  <li className="flex items-center space-x-3 text-xs md:text-sm text-black font-semibold">
+                    <div className="w-6 h-6 rounded-full bg-orange-500 text-white flex items-center justify-center text-[10px] font-bold shadow-sm animate-pulse">
+                      🐒
+                    </div>
+                    <span className="text-brand-orange font-bold text-sm md:text-base">Hanuman Chalisa Chanting</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="text-[10px] text-amber-700 font-bold uppercase tracking-wider mt-6 border-t border-amber-200/60 pt-4 flex items-center justify-between">
+                <span>Connecting kids with roots</span>
+                <span className="animate-bounce">✨</span>
+              </div>
+            </div>
+
+            {/* Card 2: Creative & General Awareness */}
+            <div className="bg-gradient-to-br from-sky-50 to-blue-50/50 border-2 border-blue-200/80 rounded-3xl p-6 md:p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden">
+              <div className="space-y-4">
+                <h3 className="font-fredoka text-xl font-bold text-brand-blue flex items-center space-x-3">
+                  <span className="text-2xl animate-float">🎨</span>
+                  <span>Creative & Cognitive Activities</span>
+                </h3>
+
+                <p className="text-black text-xs md:text-sm font-semibold leading-relaxed">
+                  Interactive and engaging sessions designed to foster creativity, global awareness, and self-confidence.
+                </p>
+
+                {/* Sub-grid of activities */}
+                <div className="grid grid-cols-2 gap-4 pt-3">
+                  <div className="bg-white border border-blue-100 hover:border-blue-300 p-3.5 rounded-2xl shadow-sm flex items-center space-x-2.5 transition-all hover:scale-[1.02] cursor-pointer">
+                    <span className="text-xl animate-float" style={{ animationDelay: '0.2s' }}>💃</span>
+                    <div className="text-left">
+                      <span className="text-xs font-bold text-brand-blue block">Dance & Rhythms</span>
+                      <span className="text-[9px] text-black font-medium leading-none">Expression & Coordination</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-blue-100 hover:border-blue-300 p-3.5 rounded-2xl shadow-sm flex items-center space-x-2.5 transition-all hover:scale-[1.02] cursor-pointer">
+                    <span className="text-xl animate-float" style={{ animationDelay: '0.4s' }}>🎵</span>
+                    <div className="text-left">
+                      <span className="text-xs font-bold text-brand-blue block">Vocal & Instrument Music</span>
+                      <span className="text-[9px] text-black font-medium leading-none">Ear Training & Rhythm</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-blue-100 hover:border-blue-300 p-3.5 rounded-2xl shadow-sm flex items-center space-x-2.5 transition-all hover:scale-[1.02] cursor-pointer">
+                    <span className="text-xl animate-float" style={{ animationDelay: '0.6s' }}>🧠</span>
+                    <div className="text-left">
+                      <span className="text-xs font-bold text-brand-blue block">General Awareness</span>
+                      <span className="text-[9px] text-black font-medium leading-none">World Facts & Logic</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-white border border-blue-100 hover:border-blue-300 p-3.5 rounded-2xl shadow-sm flex items-center space-x-2.5 transition-all hover:scale-[1.02] cursor-pointer">
+                    <span className="text-xl animate-float" style={{ animationDelay: '0.8s' }}>🗺️</span>
+                    <div className="text-left">
+                      <span className="text-xs font-bold text-brand-blue block">States & Capitals</span>
+                      <span className="text-[9px] text-black font-medium leading-none">Geography & Map Basics</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-[10px] text-blue-700 font-bold uppercase tracking-wider mt-6 border-t border-blue-200/60 pt-4 flex items-center justify-between">
+                <span>Holistic Saturday Curriculum</span>
+                <span>⭐</span>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
 
