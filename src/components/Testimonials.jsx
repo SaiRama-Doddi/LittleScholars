@@ -75,7 +75,7 @@ export default function Testimonials() {
               </div>
 
               {/* Quote Text */}
-              <p className="text-slate-600 text-lg md:text-xl font-light italic leading-relaxed mb-6">
+              <p className="text-black text-lg md:text-xl font-normal italic leading-relaxed mb-6">
                 "{testimonials[activeIndex].text}"
               </p>
 
@@ -84,7 +84,7 @@ export default function Testimonials() {
                 <h4 className="font-fredoka font-bold text-brand-blue text-base md:text-lg">
                   {testimonials[activeIndex].author}
                 </h4>
-                <p className="text-slate-400 text-xs md:text-sm font-medium">
+                <p className="text-black text-xs md:text-sm font-semibold">
                   {testimonials[activeIndex].role}
                 </p>
               </div>

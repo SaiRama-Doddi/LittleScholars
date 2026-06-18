@@ -71,7 +71,7 @@ export default function WhyChooseUs() {
               </h2>
             </div>
 
-            <p className="text-slate-600 text-base md:text-lg font-light leading-relaxed">
+            <p className="text-black text-base md:text-lg font-normal leading-relaxed">
               We provide a nurturing environment that supports cognitive, social, emotional and physical development with love and care.
             </p>
 
@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
                   <div className="bg-emerald-100 text-emerald-600 p-1 rounded-full flex-shrink-0 border border-emerald-200">
                     <Check className="w-4 h-4 stroke-[3]" />
                   </div>
-                  <span className="text-slate-700 font-semibold text-sm md:text-base">{point}</span>
+                  <span className="text-black font-semibold text-sm md:text-base">{point}</span>
                 </div>
               ))}
             </div>
@@ -110,10 +110,10 @@ export default function WhyChooseUs() {
                 <div className="p-3.5 rounded-2xl bg-white shadow-md border border-slate-100/50 mb-4">
                   {fac.icon}
                 </div>
-                <h3 className="text-lg font-bold font-fredoka text-slate-800 mb-1.5">
+                <h3 className="text-lg font-bold font-fredoka text-black mb-1.5">
                   {fac.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed font-light">
+                <p className="text-black text-sm leading-relaxed font-medium">
                   {fac.desc}
                 </p>
               </div>

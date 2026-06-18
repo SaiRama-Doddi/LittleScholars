@@ -464,12 +464,12 @@ export default function ProgramDetailsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Breadcrumbs */}
-          <nav className="flex items-center space-x-2 text-xs md:text-sm text-slate-600 mb-8 font-medium">
+          <nav className="flex items-center space-x-2 text-xs md:text-sm text-black mb-8 font-semibold">
             <Link to="/" className="hover:text-brand-orange transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/#programs" className="hover:text-brand-orange transition-colors">Programs</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-brand-blue font-semibold">{program.titleName}</span>
+            <span className="text-brand-blue font-bold">{program.titleName}</span>
           </nav>
 
           {/* Hero Banner Grid */}
@@ -483,7 +483,7 @@ export default function ProgramDetailsPage() {
               <h2 className={`text-xl md:text-2xl font-bold ${theme.accentText} font-fredoka mt-2`}>
                 {program.subtitle}
               </h2>
-              <p className="text-slate-900 text-sm md:text-base leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0 pt-2">
+              <p className="text-black text-sm md:text-base leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0 pt-2">
                 {program.desc}
               </p>
 
@@ -494,7 +494,7 @@ export default function ProgramDetailsPage() {
                     <Users className="w-5 h-5" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Age Group</div>
+                    <div className="text-[10px] text-black font-bold uppercase tracking-wider">Age Group</div>
                     <div className="text-xs md:text-sm font-bold text-brand-blue">{program.age}</div>
                   </div>
                 </div>
@@ -504,7 +504,7 @@ export default function ProgramDetailsPage() {
                     <Clock className="w-5 h-5" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Class Duration</div>
+                    <div className="text-[10px] text-black font-bold uppercase tracking-wider">Class Duration</div>
                     <div className="text-xs md:text-sm font-bold text-brand-blue">{program.duration}</div>
                   </div>
                 </div>
@@ -514,7 +514,7 @@ export default function ProgramDetailsPage() {
                     <Baby className="w-5 h-5" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Class Size</div>
+                    <div className="text-[10px] text-black font-bold uppercase tracking-wider">Class Size</div>
                     <div className="text-xs md:text-sm font-bold text-brand-blue">{program.size}</div>
                   </div>
                 </div>
@@ -560,7 +560,7 @@ export default function ProgramDetailsPage() {
                 <div className="w-12 h-1 bg-brand-yellow rounded-full mt-2" />
               </div>
 
-              <p className="text-slate-900 text-sm md:text-base leading-relaxed font-normal">
+              <p className="text-black text-sm md:text-base leading-relaxed font-normal">
                 {program.overview}
               </p>
 
@@ -570,35 +570,35 @@ export default function ProgramDetailsPage() {
                   <div className="w-12 h-12 rounded-full bg-[#f4fbf7] border-2 border-emerald-300 text-emerald-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Smile className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Happy & Secure<br/>Environment</span>
+                  <span className="text-[10px] font-bold text-black mt-2 leading-tight">Happy & Secure<br/>Environment</span>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-[#fffbf0] border-2 border-amber-300 text-amber-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Users className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Social & Emotional<br/>Development</span>
+                  <span className="text-[10px] font-bold text-black mt-2 leading-tight">Social & Emotional<br/>Development</span>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-[#f0f7ff] border-2 border-blue-300 text-blue-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Baby className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Hands-On<br/>Learning</span>
+                  <span className="text-[10px] font-bold text-black mt-2 leading-tight">Hands-On<br/>Learning</span>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-[#f5f0ff] border-2 border-purple-300 text-purple-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Brain className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Cognitive<br/>Development</span>
+                  <span className="text-[10px] font-bold text-black mt-2 leading-tight">Cognitive<br/>Development</span>
                 </div>
 
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-[#fff5f6] border-2 border-pink-300 text-pink-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Heart className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Individual<br/>Attention</span>
+                  <span className="text-[10px] font-bold text-black mt-2 leading-tight">Individual<br/>Attention</span>
                 </div>
               </div>
             </div>
@@ -611,7 +611,7 @@ export default function ProgramDetailsPage() {
                 </h3>
                 <ul className="space-y-4">
                   {program.outcomes.map((item, index) => (
-                     <li key={index} className="flex items-start space-x-3 text-xs md:text-sm text-slate-900 leading-relaxed font-semibold">
+                     <li key={index} className="flex items-start space-x-3 text-xs md:text-sm text-black leading-relaxed font-semibold">
                       <div className={`${theme.outcomesIconBg} text-white rounded-full p-0.5 mt-0.5 flex-shrink-0 shadow-sm`}>
                         <Check className="w-3.5 h-3.5 stroke-[3]" />
                       </div>
@@ -652,7 +652,7 @@ export default function ProgramDetailsPage() {
                   <h4 className="font-fredoka font-bold text-brand-blue text-sm mb-3">
                     {area.title}
                   </h4>
-                  <p className="text-slate-900 text-xs leading-relaxed font-medium">
+                  <p className="text-black text-xs leading-relaxed font-medium">
                     {area.desc}
                   </p>
                 </div>
@@ -689,7 +689,7 @@ export default function ProgramDetailsPage() {
                       <span className={`text-[10px] font-bold tracking-wider ${theme.timelineBadge} px-3 py-1 rounded-full whitespace-nowrap w-fit border`}>
                         {sched.time}
                       </span>
-                      <span className="text-xs md:text-sm text-slate-900 font-semibold">{sched.event}</span>
+                      <span className="text-xs md:text-sm text-black font-semibold">{sched.event}</span>
                     </div>
                   </div>
                 ))}
@@ -725,14 +725,14 @@ export default function ProgramDetailsPage() {
                   <div className="w-12 h-1 bg-brand-yellow rounded-full mt-2" />
                 </div>
 
-                <p className="text-slate-900 text-xs md:text-sm leading-relaxed font-semibold">
+                <p className="text-black text-xs md:text-sm leading-relaxed font-semibold">
                   We follow a play-based, child-centered curriculum that encourages exploration and discovery. Our caring educators create meaningful experiences that help children learn with joy and confidence.
                 </p>
               </div>
 
               <ul className="space-y-3 pt-2">
                 {program.approach.map((item, index) => (
-                  <li key={index} className="flex items-center space-x-3 text-xs md:text-sm text-slate-900 font-semibold">
+                  <li key={index} className="flex items-center space-x-3 text-xs md:text-sm text-black font-semibold">
                     <div className={`${theme.outcomesIconBg} text-white rounded-full p-0.5 flex-shrink-0 shadow-sm`}>
                       <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
@@ -767,7 +767,7 @@ export default function ProgramDetailsPage() {
                 <h3 className="font-fredoka font-bold text-brand-blue text-xl md:text-2xl">
                   Give Your Child The Perfect Start!
                 </h3>
-                <p className="text-slate-800 text-xs md:text-sm font-medium mt-1 leading-relaxed max-w-xl">
+                <p className="text-black text-xs md:text-sm font-semibold mt-1 leading-relaxed max-w-xl">
                   Admissions are now open for {program.titleName}. Limited seats available. Get in touch with us to enroll.
                 </p>
               </div>

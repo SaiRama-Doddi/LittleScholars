@@ -74,11 +74,11 @@ export default function AboutUs() {
               </h2>
             </div>
 
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed font-light">
+            <p className="text-black text-base md:text-lg leading-relaxed font-normal">
               At Little Scholars International Preschool, we believe every child is unique and has the potential to shine. Our safe, joyful and stimulating environment encourages children to learn, explore and grow with confidence.
             </p>
 
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed font-light">
+            <p className="text-black text-base md:text-lg leading-relaxed font-normal">
               We focus on holistic development through a blend of fun, learning, creativity and values, preparing them to be confident and creative future leaders.
             </p>
 
@@ -110,7 +110,7 @@ export default function AboutUs() {
                 <div className="text-2xl md:text-3xl font-fredoka font-bold text-brand-blue leading-none">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-slate-500 font-semibold mt-1">
+                <div className="text-xs md:text-sm text-black font-semibold mt-1">
                   {stat.label}
                 </div>
               </div>

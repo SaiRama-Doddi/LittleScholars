@@ -88,7 +88,7 @@ export default function ContactPage() {
                 <Star className="w-6 h-6 fill-brand-yellow text-brand-yellow animate-pulse" />
               </div>
 
-              <p className="text-slate-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light relative">
+              <p className="text-black text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal relative">
                 Have questions or want to know more about our programs? We're here to help you!
                 
                 {/* Small star doodle floating to the right of text */}
@@ -103,7 +103,7 @@ export default function ContactPage() {
               <img 
                 src={kidsImg} 
                 alt="Little Scholars Preschool Contact Banner" 
-                className="w-full max-w-lg md:max-w-xl h-[380px] sm:h-[450px] lg:h-[500px] object-contain pointer-events-none select-none"
+                className="w-full max-w-md md:max-w-xl h-auto max-h-[300px] sm:max-h-[450px] lg:max-h-[500px] object-contain pointer-events-none select-none"
               />
             </div>
 
@@ -137,26 +137,26 @@ export default function ContactPage() {
 
             <div className="space-y-4">
               {/* Location Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100/80 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
+              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-fredoka font-bold text-brand-blue text-sm">Our Location</h3>
-                  <p className="text-slate-600 text-xs mt-1 leading-relaxed font-light">
+                  <p className="text-black text-xs mt-1 leading-relaxed font-normal">
                     Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
                   </p>
                 </div>
               </div>
 
               {/* Phone Numbers Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100/80 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
+              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
                   <Phone className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
                   <h3 className="font-fredoka font-bold text-brand-blue text-sm">Phone Numbers</h3>
-                  <p className="text-slate-600 text-xs mt-1 font-light">
+                  <p className="text-black text-xs mt-1 font-normal">
                     9492 8484 89 <br />
                     9491 7373 99
                   </p>
@@ -164,26 +164,26 @@ export default function ContactPage() {
               </div>
 
               {/* Email Address Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100/80 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
+              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-fredoka font-bold text-brand-blue text-sm">Email Address</h3>
-                  <p className="text-slate-600 text-xs mt-1 font-light">
+                  <p className="text-black text-xs mt-1 font-normal">
                     info@littlescholars.edu.in
                   </p>
                 </div>
               </div>
 
               {/* School Timings Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100/80 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
+              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
                 <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="font-fredoka font-bold text-brand-blue text-sm">School Timings</h3>
-                  <p className="text-slate-600 text-xs mt-1 font-light leading-relaxed">
+                  <p className="text-black text-xs mt-1 font-normal leading-relaxed">
                     Monday - Saturday : 8:30 AM - 5:30 PM <br />
                     Sunday : Closed
                   </p>
@@ -210,7 +210,7 @@ export default function ContactPage() {
                     <CheckCircle className="w-8 h-8" />
                   </div>
                   <h4 className="font-fredoka font-bold text-slate-800 text-lg">Message Sent!</h4>
-                  <p className="text-slate-500 max-w-sm font-light text-xs">
+                  <p className="text-black max-w-sm font-semibold text-xs">
                     Thank you. Your message has been received, and we'll get back to you shortly.
                   </p>
                 </div>
@@ -328,7 +328,7 @@ export default function ContactPage() {
                 <h4 className="font-fredoka font-bold text-brand-blue text-sm">
                   Little Scholars International Preschool
                 </h4>
-                <p className="text-slate-500 text-[10px] mt-1 leading-relaxed font-light">
+                <p className="text-black text-xs mt-1 leading-relaxed font-semibold">
                   Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
                 </p>
               </div>
@@ -359,43 +359,43 @@ export default function ContactPage() {
 
       {/* 4. FEATURES BADGES BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="bg-white border border-slate-100 rounded-3xl py-8 px-6 md:px-10 shadow-sm">
+        <div className="bg-white border-2 border-slate-200 rounded-3xl py-8 px-6 md:px-10 shadow-sm">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Friendly Environment */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-100 last:border-0">
+            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
               <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
                 <Users className="w-5 h-5 text-brand-yellow" />
               </div>
               <div>
                 <h4 className="font-fredoka font-bold text-brand-blue text-sm">Friendly Environment</h4>
-                <p className="text-slate-500 text-[10px] mt-0.5 font-light">
+                <p className="text-black text-xs mt-0.5 font-semibold">
                   A warm and welcoming place for every child
                 </p>
               </div>
             </div>
 
             {/* Safe & Secure */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-100 last:border-0">
+            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
               <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
                 <Shield className="w-5 h-5 text-brand-yellow" />
               </div>
               <div>
                 <h4 className="font-fredoka font-bold text-brand-blue text-sm">Safe & Secure</h4>
-                <p className="text-slate-500 text-[10px] mt-0.5 font-light">
+                <p className="text-black text-xs mt-0.5 font-semibold">
                   Your child's safety is our top priority
                 </p>
               </div>
             </div>
 
             {/* Quality Education */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 lg:border-r border-slate-100 last:border-0">
+            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 lg:border-r border-slate-200 last:border-0">
               <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
                 <Star className="w-5 h-5 text-brand-yellow fill-brand-yellow" />
               </div>
               <div>
                 <h4 className="font-fredoka font-bold text-brand-blue text-sm">Quality Education</h4>
-                <p className="text-slate-500 text-[10px] mt-0.5 font-light">
+                <p className="text-black text-xs mt-0.5 font-semibold">
                   Learning through play and exploration
                 </p>
               </div>
@@ -408,7 +408,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-fredoka font-bold text-brand-blue text-sm">Caring Teachers</h4>
-                <p className="text-slate-500 text-[10px] mt-0.5 font-light">
+                <p className="text-black text-xs mt-0.5 font-semibold">
                   Experienced and loving educators
                 </p>
               </div>

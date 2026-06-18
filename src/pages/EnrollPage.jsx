@@ -170,7 +170,7 @@ export default function EnrollPage() {
                   For A Bright Future
                 </h2>
 
-                <p className="text-slate-600 text-sm md:text-base max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
+                <p className="text-black text-sm md:text-base max-w-md mx-auto lg:mx-0 font-normal leading-relaxed">
                   Join Little Scholars International Preschool where learning is fun, safe and meaningful.
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default function EnrollPage() {
                   <h3 className="font-fredoka text-xl font-bold text-brand-blue uppercase tracking-wide">
                     Enroll Your Child Today!
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1 font-light">
+                  <p className="text-xs text-black mt-1 font-medium">
                     Fill in the details below and our team will get in touch with you.
                   </p>
                 </div>
@@ -205,7 +205,7 @@ export default function EnrollPage() {
                       <CheckCircle className="w-10 h-10" />
                     </div>
                     <h4 className="font-fredoka font-bold text-slate-800 text-lg">Enquiry Submitted!</h4>
-                    <p className="text-slate-500 max-w-sm font-light text-xs">
+                    <p className="text-black max-w-sm font-semibold text-xs">
                       Thank you. We have received your enrollment inquiry. Our admissions office will contact you shortly.
                     </p>
                   </div>
@@ -392,7 +392,7 @@ export default function EnrollPage() {
                 {item.icon}
               </div>
               <h3 className="font-fredoka font-bold text-brand-blue text-xs">{item.title}</h3>
-              <p className="text-slate-500 text-[10px] leading-relaxed font-light">{item.desc}</p>
+              <p className="text-black text-xs leading-relaxed font-medium">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -425,7 +425,7 @@ export default function EnrollPage() {
               </div>
 
               <h3 className="font-fredoka font-bold text-brand-blue text-sm">{step.title}</h3>
-              <p className="text-slate-500 text-[10px] leading-relaxed max-w-[180px] font-light">{step.desc}</p>
+              <p className="text-black text-xs leading-relaxed max-w-[180px] font-medium">{step.desc}</p>
 
               {/* Flow Arrows */}
               {index < steps.length - 1 && (
@@ -469,7 +469,7 @@ export default function EnrollPage() {
               <h3 className="font-fredoka font-bold text-lg text-brand-yellow uppercase tracking-wide">
                 Limited Seats Available!
               </h3>
-              <p className="text-slate-300 text-xs font-light max-w-sm mt-0.5">
+              <p className="text-slate-250 text-xs font-normal max-w-sm mt-0.5">
                 Hurry up and secure your child's admission today.
               </p>
             </div>

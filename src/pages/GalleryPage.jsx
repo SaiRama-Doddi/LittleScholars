@@ -159,7 +159,7 @@ export default function GalleryPage() {
     <div className="bg-slate-50 font-outfit min-h-screen">
       
       {/* 1. Gallery Hero Banner */}
-      <section className="relative w-full aspect-[2.45/1] min-h-[300px] md:min-h-[450px] lg:min-h-[500px] overflow-hidden">
+      <section className="relative w-full aspect-[2.45/1] overflow-hidden">
         <img
           src={galleryBannerImg}
           alt="Little Scholars Gallery Banner"
@@ -187,7 +187,7 @@ export default function GalleryPage() {
                 className={`flex items-center space-x-2 px-5 py-2.5 rounded-full text-sm font-fredoka font-semibold transition-all duration-300 border shadow-sm ${
                   isActive
                     ? 'bg-brand-blue border-brand-blue text-white scale-105 shadow-md'
-                    : 'bg-white border-slate-200 text-slate-600 hover:border-brand-blue/40 hover:text-brand-blue hover:bg-slate-50'
+                    : 'bg-white border-slate-200 text-black hover:border-brand-blue/40 hover:text-brand-blue hover:bg-slate-50'
                 }`}
               >
                 {cat.icon}
@@ -228,10 +228,10 @@ export default function GalleryPage() {
 
               {/* Text Area */}
               <div className="p-5">
-                <h3 className="font-fredoka font-bold text-slate-800 text-lg leading-snug group-hover:text-brand-orange transition-colors">
+                <h3 className="font-fredoka font-bold text-black text-lg leading-snug group-hover:text-brand-orange transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-slate-500 text-xs mt-2 font-light leading-relaxed">
+                <p className="text-black text-xs mt-2 font-normal leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -243,8 +243,8 @@ export default function GalleryPage() {
         {filteredItems.length === 0 && (
           <div className="text-center py-20 bg-white rounded-3xl border border-dashed border-slate-200">
             <span className="text-4xl">📸</span>
-            <h3 className="font-fredoka font-bold text-slate-700 mt-4">No Photos Found</h3>
-            <p className="text-slate-400 text-sm mt-1">We will upload moments for this category soon!</p>
+            <h3 className="font-fredoka font-bold text-black mt-4">No Photos Found</h3>
+            <p className="text-black text-sm mt-1">We will upload moments for this category soon!</p>
           </div>
         )}
 

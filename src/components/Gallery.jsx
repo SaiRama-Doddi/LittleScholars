@@ -57,7 +57,7 @@ export default function Gallery() {
                 <span className="text-brand-orange">Matter</span>
               </h2>
             </div>
-            <p className="text-slate-600 text-base md:text-lg font-light leading-relaxed">
+            <p className="text-black text-base md:text-lg font-normal leading-relaxed">
               Take a peek into the daily adventures of our little scholars. Our gallery highlights active learning, playful exploration, and creative expression.
             </p>
             <div className="pt-2">
@@ -92,10 +92,10 @@ export default function Gallery() {
 
                 {/* Polaroid style caption */}
                 <div className="mt-4 text-center">
-                  <h4 className="font-fredoka font-bold text-slate-800 text-base leading-tight">
+                  <h4 className="font-fredoka font-bold text-black text-base leading-tight">
                     {img.title}
                   </h4>
-                  <p className="text-slate-400 text-xs mt-1.5 font-light">
+                  <p className="text-black text-xs mt-1.5 font-medium">
                     {img.desc}
                   </p>
                 </div>

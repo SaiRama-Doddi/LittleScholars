@@ -194,7 +194,7 @@ export default function Navbar() {
           >
             Enroll Now
           </Link>
-          <div className="text-center text-xs text-slate-400">
+          <div className="text-center text-xs text-black font-semibold">
             Admissions Open 2026-27
           </div>
         </div>

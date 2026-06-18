@@ -25,8 +25,8 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative bg-[#f0f7ff] overflow-hidden">
-      {/* Slider Wrapper */}
-      <div className="relative w-full aspect-[2.45/1] sm:aspect-[2.45/1] min-h-[300px] md:min-h-[450px] lg:min-h-[600px] overflow-hidden">
+      {/* Slider Wrapper - Perfectly responsive aspect ratio */}
+      <div className="relative w-full aspect-[2.45/1] overflow-hidden">
         {banners.map((banner, index) => (
           <div
             key={index}
@@ -43,30 +43,30 @@ export default function Hero() {
           </div>
         ))}
 
-        {/* Slider Navigation Arrows */}
+        {/* Slider Navigation Arrows - Scaled for responsiveness */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/40 hover:bg-white/80 p-2 md:p-3 rounded-full text-brand-blue transition-all duration-200 focus:outline-none"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 bg-white/40 hover:bg-white/80 p-1.5 sm:p-2 md:p-3 rounded-full text-brand-blue transition-all duration-200 focus:outline-none"
           aria-label="Previous banner"
         >
-          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/40 hover:bg-white/80 p-2 md:p-3 rounded-full text-brand-blue transition-all duration-200 focus:outline-none"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 bg-white/40 hover:bg-white/80 p-1.5 sm:p-2 md:p-3 rounded-full text-brand-blue transition-all duration-200 focus:outline-none"
           aria-label="Next banner"
         >
-          <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
         </button>
 
-        {/* Navigation Indicator Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+        {/* Navigation Indicator Dots - Adjusted positions */}
+        <div className="absolute bottom-2 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-1.5">
           {banners.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-brand-yellow w-6 md:w-8' : 'bg-white/50 hover:bg-white/80'
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-brand-yellow w-4 sm:w-6' : 'bg-white/50 hover:bg-white/80'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

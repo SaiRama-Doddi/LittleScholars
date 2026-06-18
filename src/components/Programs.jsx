@@ -119,7 +119,7 @@ export default function Programs() {
               </h3>
 
               {/* Description */}
-              <p className="text-slate-700 text-sm leading-relaxed font-normal">
+              <p className="text-black text-sm leading-relaxed font-normal">
                 {prog.desc}
               </p>
 
