@@ -35,4 +35,12 @@ export default function App() {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/admissions" element={<AdmissionsPage />} />
-          <Route path="/enroll" element={<EnrollP
+          <Route path="/enroll" element={<EnrollPage />} />
+        </Routes>
+      </div>
+
+      {/* Footer Block */}
+      <Footer />
+    </div>
+  )
+}

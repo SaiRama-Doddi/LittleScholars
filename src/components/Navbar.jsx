@@ -122,8 +122,7 @@ export default function Navbar() {
           {/* Action Button & Hamburger */}
           <div className="flex items-center space-x-4">
             <Link
-              to="/#admissions"
-              onClick={(e) => handleNavClick(e, '/#admissions')}
+              to="/enroll"
               className="hidden sm:inline-block bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 font-fredoka text-sm"
             >
               Enroll Now
@@ -181,8 +180,8 @@ export default function Navbar() {
 
         <div className="mt-8 space-y-4">
           <Link
-            to="/#admissions"
-            onClick={(e) => handleNavClick(e, '/#admissions')}
+            to="/enroll"
+            onClick={() => setIsOpen(false)}
             className="block w-full text-center bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold py-3 rounded-full transition-all shadow-md font-fredoka"
           >
             Enroll Now

@@ -289,7 +289,7 @@ export default function AdmissionsPage() {
 
               <div className="mt-8 z-10 relative">
                 <Link
-                  to="/contact"
+                  to="/enroll"
                   className="bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-fredoka font-bold py-3 px-6 rounded-full inline-flex items-center space-x-2 transition-all duration-300 shadow-md hover:shadow-lg text-sm"
                 >
                   <span>Enroll Now</span>
