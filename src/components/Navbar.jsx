@@ -43,7 +43,7 @@ export default function Navbar() {
       return
     }
 
-    const sections = ['home', 'about', 'programs', 'facilities']
+    const sections = ['home', 'about', 'programs']
     
     const handleScrollActive = () => {
       const offset = 160 // Header/Navbar offset height check
@@ -75,7 +75,6 @@ export default function Navbar() {
     { name: 'Home', href: '/#home' },
     { name: 'About Us', href: '/#about' },
     { name: 'Programs', href: '/#programs' },
-    { name: 'Facilities', href: '/#facilities' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Admissions', href: '/admissions' },
     { name: 'Contact Us', href: '/contact' },
@@ -129,9 +128,9 @@ export default function Navbar() {
 
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-2' : 'bg-white py-4 shadow-md'
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg py-1' : 'bg-white py-2 shadow-md'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 md:px-8 lg:px-12">
         <div className="flex justify-between items-center">
           {/* Logo & School Name */}
           <Link 
@@ -143,7 +142,7 @@ export default function Navbar() {
               <img 
                 src={logoImg} 
                 alt="Little Scholars Logo" 
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-brand-blue shadow-md transition-transform duration-300 group-hover:scale-105"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-brand-blue shadow-md transition-all duration-300 group-hover:scale-105"
               />
               <GraduationCap className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 text-brand-blue bg-white rounded-full p-0.5 border border-brand-blue/30 animate-bounce" />
             </div>

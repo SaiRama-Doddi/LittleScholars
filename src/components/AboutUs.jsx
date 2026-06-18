@@ -26,7 +26,7 @@ export default function AboutUs() {
   ]
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-white relative overflow-hidden font-outfit scroll-mt-28">
+    <section id="about" className="pt-6 md:pt-10 pb-10 md:pb-14 bg-white relative overflow-hidden font-outfit scroll-mt-28">
       
       {/* Decorative SVGs */}
       <div className="absolute top-10 left-5 text-brand-yellow/10 pointer-events-none select-none">
@@ -63,32 +63,43 @@ export default function AboutUs() {
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col justify-between gap-y-6 lg:gap-y-0 lg:h-[450px] py-1">
             <div>
-              <span className="text-sm font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-3 py-1.5 rounded-md border border-brand-yellow/30">
+              <span className="text-base font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-4 py-2 rounded-md border border-brand-yellow/30">
                 About Us
               </span>
-              <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-4 leading-tight">
+              <h2 className="text-4xl md:text-[52px] font-fredoka font-bold text-brand-blue mt-5 leading-tight md:leading-[1.1]">
                 Nurturing Young Minds <br />
                 <span className="text-brand-orange">For A Bright Future</span>
               </h2>
             </div>
 
-            <p className="text-black text-base md:text-lg leading-relaxed font-normal">
+            <p className="text-black text-base sm:text-lg lg:text-xl leading-relaxed font-normal text-justify">
               At Little Scholars International Preschool, we believe every child is unique and has the potential to shine. Our safe, joyful and stimulating environment encourages children to learn, explore and grow with confidence.
             </p>
 
-            <p className="text-black text-base md:text-lg leading-relaxed font-normal">
+            <p className="text-black text-base sm:text-lg lg:text-xl leading-relaxed font-normal text-justify">
               We focus on holistic development through a blend of fun, learning, creativity and values, preparing them to be confident and creative future leaders.
             </p>
 
-            <div className="pt-2">
-              <a
-                href="#contact"
-                className="inline-block bg-brand-blue hover:bg-brand-orange text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-fredoka"
-              >
-                Know More About Us
-              </a>
+            {/* Core Features Highlight Grid */}
+            <div className="grid grid-cols-2 gap-4 border-t border-slate-100 pt-5">
+              <div className="flex items-center space-x-2.5 text-brand-blue">
+                <span className="bg-brand-lightyellow p-1.5 rounded-full text-brand-orange text-xs">✨</span>
+                <span className="font-fredoka font-semibold text-sm sm:text-base">Child-Centric Learning</span>
+              </div>
+              <div className="flex items-center space-x-2.5 text-brand-blue">
+                <span className="bg-brand-lightyellow p-1.5 rounded-full text-brand-orange text-xs">🛡️</span>
+                <span className="font-fredoka font-semibold text-sm sm:text-base">100% Safe & Secure</span>
+              </div>
+              <div className="flex items-center space-x-2.5 text-brand-blue">
+                <span className="bg-brand-lightyellow p-1.5 rounded-full text-brand-orange text-xs">🎨</span>
+                <span className="font-fredoka font-semibold text-sm sm:text-base">Creative Activities</span>
+              </div>
+              <div className="flex items-center space-x-2.5 text-brand-blue">
+                <span className="bg-brand-lightyellow p-1.5 rounded-full text-brand-orange text-xs">🏫</span>
+                <span className="font-fredoka font-semibold text-sm sm:text-base">Modern Play Facilities</span>
+              </div>
             </div>
           </div>
 
