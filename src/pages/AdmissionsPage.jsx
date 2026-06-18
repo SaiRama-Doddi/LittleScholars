@@ -16,7 +16,7 @@ import {
   ArrowDown,
   Star
 } from 'lucide-react'
-import kidsImg from '../assets/admissions_hero_kids.png'
+import kidsImg from '../assets/admissions_hero_kids.webp'
 
 export default function AdmissionsPage() {
   const steps = [

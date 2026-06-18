@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Camera, Image as ImageIcon } from 'lucide-react'
-import galleryLearning from '../assets/gallery_learning.png'
-import galleryPlay from '../assets/gallery_play.png'
-import galleryArt from '../assets/gallery_art.png'
+import galleryLearning from '../assets/gallery_learning.webp'
+import galleryPlay from '../assets/gallery_play.webp'
+import galleryArt from '../assets/gallery_art.webp'
 
 export default function Gallery() {
   const images = [

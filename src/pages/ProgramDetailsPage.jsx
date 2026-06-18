@@ -24,24 +24,24 @@ import {
 } from 'lucide-react'
 
 // Import program illustrations
-import programDaycare from '../assets/program_daycare.png'
-import programPlaygroup from '../assets/program_playgroup.png'
-import programNursery from '../assets/program_nursery.png'
-import programJuniorKG from '../assets/program_juniorkg.png'
-import programSeniorKG from '../assets/program_seniorkg.png'
+import programDaycare from '../assets/program_daycare.webp'
+import programPlaygroup from '../assets/program_playgroup.webp'
+import programNursery from '../assets/program_nursery.webp'
+import programJuniorKG from '../assets/program_juniorkg.webp'
+import programSeniorKG from '../assets/program_seniorkg.webp'
 
 // Import photos for details
-import detailsPlaygroupHero from '../assets/details_playgroup_hero.png'
-import detailsPlaygroupTypical from '../assets/details_playgroup_typical.png'
-import detailsChildAvatar from '../assets/details_child_avatar.png'
-import paintedHandsChild from '../assets/painted_hands_child.png'
-import motherChild from '../assets/mother_child.png'
-import galleryLearning from '../assets/gallery_learning.png'
-import galTeacher from '../assets/gal_teacher.png'
-import galleryArt from '../assets/gallery_art.png'
-import galGrad from '../assets/gal_grad.png'
-import galRead from '../assets/gal_read.png'
-import aboutSchool from '../assets/about_school.png'
+import detailsPlaygroupHero from '../assets/details_playgroup_hero.webp'
+import detailsPlaygroupTypical from '../assets/details_playgroup_typical.webp'
+import detailsChildAvatar from '../assets/details_child_avatar.webp'
+import paintedHandsChild from '../assets/painted_hands_child.webp'
+import motherChild from '../assets/mother_child.webp'
+import galleryLearning from '../assets/gallery_learning.webp'
+import galTeacher from '../assets/gal_teacher.webp'
+import galleryArt from '../assets/gallery_art.webp'
+import galGrad from '../assets/gal_grad.webp'
+import galRead from '../assets/gal_read.webp'
+import aboutSchool from '../assets/about_school.webp'
 
 const programsData = {
   'day-care': {

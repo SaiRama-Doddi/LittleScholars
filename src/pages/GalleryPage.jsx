@@ -2,20 +2,20 @@ import { useState } from 'react'
 import { Grid, Sparkles, BookOpen, Calendar, ToyBrick, GraduationCap, Smile, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Import gallery banner
-import galleryBannerImg from '../assets/banner1.png'
+import galleryBannerImg from '../assets/banner1.webp'
 
 // Import gallery images
-import imgDrawing from '../assets/gallery_art.png'
-import imgRings from '../assets/gallery_learning.png'
-import imgReading from '../assets/gal_read.png'
-import imgSlide from '../assets/gallery_play.png'
-import imgPaint from '../assets/painted_hands_child.png'
-import imgDance from '../assets/gal_dance.png'
-import imgCake from '../assets/gal_cake.png'
-import imgGrad from '../assets/gal_grad.png'
-import imgPlant from '../assets/gal_plant.png'
-import imgTeacher from '../assets/gal_teacher.png'
-import imgHands from '../assets/gal_hands.png'
+import imgDrawing from '../assets/gallery_art.webp'
+import imgRings from '../assets/gallery_learning.webp'
+import imgReading from '../assets/gal_read.webp'
+import imgSlide from '../assets/gallery_play.webp'
+import imgPaint from '../assets/painted_hands_child.webp'
+import imgDance from '../assets/gal_dance.webp'
+import imgCake from '../assets/gal_cake.webp'
+import imgGrad from '../assets/gal_grad.webp'
+import imgPlant from '../assets/gal_plant.webp'
+import imgTeacher from '../assets/gal_teacher.webp'
+import imgHands from '../assets/gal_hands.webp'
 
 export default function GalleryPage() {
   const categories = [

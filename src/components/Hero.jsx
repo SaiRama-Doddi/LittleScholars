@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Phone, MapPin } from 'lucide-react'
-import banner2 from '../assets/banner2.png'
-import banner3 from '../assets/banner3.png'
+import banner2 from '../assets/banner2.webp'
+import banner3 from '../assets/banner3.webp'
 
 export default function Hero() {
   const banners = [banner2, banner3]

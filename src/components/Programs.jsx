@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import programDaycare from '../assets/program_daycare.png'
-import programPlaygroup from '../assets/program_playgroup.png'
-import programNursery from '../assets/program_nursery.png'
-import programJuniorKG from '../assets/program_juniorkg.png'
-import programSeniorKG from '../assets/program_seniorkg.png'
+import programDaycare from '../assets/program_daycare.webp'
+import programPlaygroup from '../assets/program_playgroup.webp'
+import programNursery from '../assets/program_nursery.webp'
+import programJuniorKG from '../assets/program_juniorkg.webp'
+import programSeniorKG from '../assets/program_seniorkg.webp'
 
 // Custom handdrawn-style SVG doodles to match the mockup
 const StarDoodle = ({ className }) => (

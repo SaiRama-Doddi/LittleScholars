@@ -15,7 +15,7 @@ import {
   Heart,
   Navigation
 } from 'lucide-react'
-import kidsImg from '../assets/contact_hero_kids.png'
+import kidsImg from '../assets/contact_hero_kids.webp'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Quote, Star } from 'lucide-react'
-import parentChildImg from '../assets/mother_child.png'
+import parentChildImg from '../assets/mother_child.webp'
 
 export default function Testimonials() {
   const testimonials = [

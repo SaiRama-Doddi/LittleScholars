@@ -1,5 +1,5 @@
 import { ShieldAlert, Users, Award, Heart, BookOpen } from 'lucide-react'
-import aboutSchoolImg from '../assets/about_school.png'
+import aboutSchoolImg from '../assets/about_school.webp'
 
 export default function AboutUs() {
   const stats = [

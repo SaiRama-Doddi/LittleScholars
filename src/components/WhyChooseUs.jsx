@@ -1,5 +1,5 @@
 import { Check, Monitor, ShieldCheck, Music, Palette, Book, ToyBrick } from 'lucide-react'
-import childImg from '../assets/painted_hands_child.png'
+import childImg from '../assets/painted_hands_child.webp'
 
 export default function WhyChooseUs() {
   const points = [
