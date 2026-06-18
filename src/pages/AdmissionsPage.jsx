@@ -79,7 +79,7 @@ export default function AdmissionsPage() {
   ]
 
   return (
-    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16">
+    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16 animate-page-fade">
       
       {/* 1. HERO BANNER SECTION */}
       <section className="relative bg-white overflow-hidden pt-8 md:pt-12 pb-0">

@@ -43,7 +43,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16">
+    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16 animate-page-fade">
       
       {/* 1. HERO BANNER SECTION (White background with blue wavy divider) */}
       <section className="relative bg-white overflow-hidden pt-8 md:pt-12 pb-0">

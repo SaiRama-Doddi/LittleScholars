@@ -128,7 +128,7 @@ export default function EnrollPage() {
   ]
 
   return (
-    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16">
+    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16 animate-page-fade">
       
       {/* 1. HERO BANNER & FORM SECTION */}
       <section className="relative bg-white overflow-hidden pt-8 md:pt-12 pb-16 lg:pb-20">

@@ -135,15 +135,6 @@ export default function Programs() {
           ))}
         </div>
 
-        {/* Bottom Call To Action */}
-        <div className="text-center">
-          <Link
-            to="/admissions"
-            className="inline-block bg-[#0c2b5c] hover:bg-brand-orange text-white font-fredoka font-semibold px-10 py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-base"
-          >
-            View All Programs
-          </Link>
-        </div>
 
       </div>
     </section>

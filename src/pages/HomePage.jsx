@@ -27,13 +27,13 @@ export default function HomePage() {
   }, [location])
 
   return (
-    <>
+    <div className="animate-page-fade">
       <Hero />
       <AboutUs />
       <Programs />
       <WhyChooseUs />
       <Gallery />
       <Testimonials />
-    </>
+    </div>
   )
 }

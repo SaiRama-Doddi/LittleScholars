@@ -451,7 +451,7 @@ export default function ProgramDetailsPage() {
   const theme = programThemes[programId] || programThemes['play-group']
 
   return (
-    <div className="bg-slate-50 min-h-screen font-outfit relative">
+    <div className="bg-slate-50 min-h-screen font-outfit relative animate-page-fade">
       
       {/* 1. Breadcrumbs & Header Section */}
       <div className={`bg-gradient-to-b ${theme.heroBg} pt-6 pb-20 relative overflow-hidden`}>

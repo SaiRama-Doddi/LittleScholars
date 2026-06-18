@@ -156,7 +156,7 @@ export default function GalleryPage() {
   }
 
   return (
-    <div className="bg-slate-50 font-outfit min-h-screen">
+    <div className="bg-slate-50 font-outfit min-h-screen animate-page-fade">
       
       {/* 1. Gallery Hero Banner */}
       <section className="relative w-full aspect-[2.45/1] overflow-hidden">
