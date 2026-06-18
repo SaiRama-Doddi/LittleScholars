@@ -9,6 +9,8 @@ export default function Navbar() {
   const location = useLocation()
   const navigate = useNavigate()
 
+  const [activeSection, setActiveSection] = useState('home')
+
   // Track scroll position to adjust styling
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +23,41 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Scrollspy: Automatically detect active section on homepage
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setActiveSection('')
+      return
+    }
+
+    const sections = ['home', 'about', 'programs', 'facilities']
+    
+    const handleScrollActive = () => {
+      const offset = 160 // Header/Navbar offset height check
+
+      if (window.scrollY < 50) {
+        setActiveSection('home')
+        return
+      }
+
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          if (rect.top <= offset && rect.bottom >= offset) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScrollActive)
+    handleScrollActive() // Run once on mount/location change
+
+    return () => window.removeEventListener('scroll', handleScrollActive)
+  }, [location.pathname])
 
   const navLinks = [
     { name: 'Home', href: '/#home' },
@@ -68,8 +105,14 @@ export default function Navbar() {
     if (href === '/admissions') {
       return location.pathname === '/admissions'
     }
-    // For home anchors, highlight if on home page
-    return location.pathname === '/' && href.startsWith('/#') && location.state?.scrollTo === href.substring(2)
+    if (href === '/#programs') {
+      return location.pathname.startsWith('/programs') || (location.pathname === '/' && activeSection === 'programs')
+    }
+    // For other home anchors, highlight if activeSection matches
+    if (location.pathname === '/' && href.startsWith('/#')) {
+      return activeSection === href.substring(2)
+    }
+    return false
   }
 
   return (
