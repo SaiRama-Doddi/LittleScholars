@@ -192,8 +192,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-brand-yellow flex-shrink-0" />
-                <a href="mailto:info@littlescholars.edu.in" className="hover:text-brand-yellow transition-colors">
-                  info@littlescholars.edu.in
+                <a href="mailto:littlescholarsips@gmail.com" className="hover:text-brand-yellow transition-colors">
+                  littlescholarsips@gmail.com
                 </a>
               </li>
             </ul>

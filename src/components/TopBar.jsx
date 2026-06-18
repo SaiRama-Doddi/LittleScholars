@@ -9,9 +9,9 @@ export default function TopBar() {
           <Phone className="w-4 h-4 mr-2 text-brand-yellow" />
           <span className="font-semibold">9492 8484 89 / 9491 7373 99</span>
         </a>
-        <a href="mailto:info@littlescholars.edu.in" className="flex items-center hover:text-brand-yellow transition-colors duration-200">
+        <a href="mailto:littlescholarsips@gmail.com" className="flex items-center hover:text-brand-yellow transition-colors duration-200">
           <Mail className="w-4 h-4 mr-2 text-brand-yellow" />
-          <span>info@littlescholars.edu.in</span>
+          <span>littlescholarsips@gmail.com</span>
         </a>
       </div>
 

@@ -142,8 +142,8 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-sm">Our Location</h3>
-                  <p className="text-black text-xs mt-1 leading-relaxed font-normal">
+                  <h3 className="font-fredoka font-bold text-brand-blue text-base">Our Location</h3>
+                  <p className="text-black text-sm mt-1 leading-relaxed font-normal">
                     Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
                   </p>
                 </div>
@@ -155,8 +155,8 @@ export default function ContactPage() {
                   <Phone className="w-5 h-5 animate-pulse" />
                 </div>
                 <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-sm">Phone Numbers</h3>
-                  <p className="text-black text-xs mt-1 font-normal">
+                  <h3 className="font-fredoka font-bold text-brand-blue text-base">Phone Numbers</h3>
+                  <p className="text-black text-sm mt-1 font-normal">
                     9492 8484 89 <br />
                     9491 7373 99
                   </p>
@@ -169,9 +169,9 @@ export default function ContactPage() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-sm">Email Address</h3>
-                  <p className="text-black text-xs mt-1 font-normal">
-                    info@littlescholars.edu.in
+                  <h3 className="font-fredoka font-bold text-brand-blue text-base">Email Address</h3>
+                  <p className="text-black text-sm mt-1 font-normal">
+                    littlescholarsips@gmail.com
                   </p>
                 </div>
               </div>
@@ -182,8 +182,8 @@ export default function ContactPage() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-sm">School Timings</h3>
-                  <p className="text-black text-xs mt-1 font-normal leading-relaxed">
+                  <h3 className="font-fredoka font-bold text-brand-blue text-base">School Timings</h3>
+                  <p className="text-black text-sm mt-1 font-normal leading-relaxed">
                     Monday - Saturday : 8:30 AM - 5:30 PM <br />
                     Sunday : Closed
                   </p>
