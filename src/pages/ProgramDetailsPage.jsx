@@ -294,29 +294,167 @@ const AirplaneDoodle = ({ className }) => (
   </svg>
 )
 
+// Program themes mapping for dynamic styles
+const programThemes = {
+  'day-care': {
+    primaryColor: 'pink',
+    heroBg: 'from-pink-50/80 via-[#fdf7f9] to-white',
+    badgeBorder: 'border-pink-200 hover:border-pink-400',
+    badgeIconBg: 'bg-pink-50',
+    badgeIconColor: 'text-pink-500',
+    accentText: 'text-pink-600',
+    outcomesBg: 'bg-[#fff5f6]',
+    outcomesBorder: 'border-pink-200',
+    outcomesIconBg: 'bg-pink-500',
+    timelineBadge: 'text-pink-600 bg-pink-50 border-pink-200',
+    quoteBg: 'bg-[#fff5f6]',
+    quoteBorder: 'border-pink-400',
+    quoteText: 'text-pink-900',
+    quoteAuthor: 'text-pink-600',
+    approachIconBg: 'bg-pink-500',
+    ctaBg: 'bg-[#fff5f6]',
+    ctaBorder: 'border-pink-200',
+    ctaButton: 'bg-pink-600 hover:bg-pink-700',
+  },
+  'play-group': {
+    primaryColor: 'emerald',
+    heroBg: 'from-emerald-50/80 via-[#f6fcf8] to-white',
+    badgeBorder: 'border-emerald-200 hover:border-emerald-400',
+    badgeIconBg: 'bg-emerald-50',
+    badgeIconColor: 'text-emerald-500',
+    accentText: 'text-emerald-600',
+    outcomesBg: 'bg-[#f4fbf7]',
+    outcomesBorder: 'border-emerald-200',
+    outcomesIconBg: 'bg-emerald-500',
+    timelineBadge: 'text-emerald-600 bg-emerald-50 border-emerald-200',
+    quoteBg: 'bg-[#f4fbf7]',
+    quoteBorder: 'border-emerald-400',
+    quoteText: 'text-emerald-900',
+    quoteAuthor: 'text-emerald-600',
+    approachIconBg: 'bg-emerald-500',
+    ctaBg: 'bg-[#f4fbf7]',
+    ctaBorder: 'border-emerald-200',
+    ctaButton: 'bg-emerald-600 hover:bg-emerald-700',
+  },
+  'nursery': {
+    primaryColor: 'amber',
+    heroBg: 'from-amber-50/70 via-[#fdfcf8] to-white',
+    badgeBorder: 'border-amber-200 hover:border-amber-400',
+    badgeIconBg: 'bg-amber-50',
+    badgeIconColor: 'text-amber-500',
+    accentText: 'text-amber-600',
+    outcomesBg: 'bg-[#fffbf0]',
+    outcomesBorder: 'border-amber-200',
+    outcomesIconBg: 'bg-amber-500',
+    timelineBadge: 'text-amber-600 bg-amber-50 border-amber-200',
+    quoteBg: 'bg-[#fffbf0]',
+    quoteBorder: 'border-amber-400',
+    quoteText: 'text-amber-900',
+    quoteAuthor: 'text-amber-600',
+    approachIconBg: 'bg-amber-500',
+    ctaBg: 'bg-[#fffbf0]',
+    ctaBorder: 'border-amber-200',
+    ctaButton: 'bg-amber-600 hover:bg-amber-700',
+  },
+  'junior-kg': {
+    primaryColor: 'blue',
+    heroBg: 'from-blue-50/70 via-[#f8faff] to-white',
+    badgeBorder: 'border-blue-200 hover:border-blue-400',
+    badgeIconBg: 'bg-blue-50',
+    badgeIconColor: 'text-blue-500',
+    accentText: 'text-blue-600',
+    outcomesBg: 'bg-[#f0f7ff]',
+    outcomesBorder: 'border-blue-200',
+    outcomesIconBg: 'bg-blue-500',
+    timelineBadge: 'text-blue-600 bg-blue-50 border-blue-200',
+    quoteBg: 'bg-[#f0f7ff]',
+    quoteBorder: 'border-blue-400',
+    quoteText: 'text-blue-900',
+    quoteAuthor: 'text-blue-600',
+    approachIconBg: 'bg-blue-500',
+    ctaBg: 'bg-[#f0f7ff]',
+    ctaBorder: 'border-blue-200',
+    ctaButton: 'bg-blue-600 hover:bg-blue-700',
+  },
+  'senior-kg': {
+    primaryColor: 'orange',
+    heroBg: 'from-orange-50/70 via-[#fffbf7] to-white',
+    badgeBorder: 'border-orange-200 hover:border-orange-400',
+    badgeIconBg: 'bg-orange-50',
+    badgeIconColor: 'text-orange-500',
+    accentText: 'text-orange-600',
+    outcomesBg: 'bg-[#fffbf2]',
+    outcomesBorder: 'border-orange-200',
+    outcomesIconBg: 'bg-orange-500',
+    timelineBadge: 'text-orange-600 bg-orange-50 border-orange-200',
+    quoteBg: 'bg-[#fffbf2]',
+    quoteBorder: 'border-orange-400',
+    quoteText: 'text-orange-900',
+    quoteAuthor: 'text-orange-600',
+    approachIconBg: 'bg-orange-500',
+    ctaBg: 'bg-[#fffbf2]',
+    ctaBorder: 'border-orange-200',
+    ctaButton: 'bg-orange-600 hover:bg-orange-700',
+  }
+}
+
+const keyAreaStyles = [
+  {
+    borderClass: 'border-pink-300 hover:border-pink-500 shadow-pink-50/20',
+    bgClass: 'bg-[#fff5f6]',
+    iconColorClass: 'text-pink-600',
+    iconBgClass: 'bg-pink-50 border-pink-200'
+  },
+  {
+    borderClass: 'border-emerald-300 hover:border-emerald-500 shadow-emerald-50/20',
+    bgClass: 'bg-[#f4fbf7]',
+    iconColorClass: 'text-emerald-600',
+    iconBgClass: 'bg-emerald-50 border-emerald-200'
+  },
+  {
+    borderClass: 'border-amber-300 hover:border-amber-500 shadow-amber-50/20',
+    bgClass: 'bg-[#fffbf0]',
+    iconColorClass: 'text-amber-600',
+    iconBgClass: 'bg-amber-50 border-amber-200'
+  },
+  {
+    borderClass: 'border-blue-300 hover:border-blue-500 shadow-blue-50/20',
+    bgClass: 'bg-[#f0f7ff]',
+    iconColorClass: 'text-blue-600',
+    iconBgClass: 'bg-blue-50 border-blue-200'
+  },
+  {
+    borderClass: 'border-orange-300 hover:border-orange-500 shadow-orange-50/20',
+    bgClass: 'bg-[#fffbf2]',
+    iconColorClass: 'text-orange-600',
+    iconBgClass: 'bg-orange-50 border-orange-200'
+  }
+]
+
 export default function ProgramDetailsPage() {
   const { programId } = useParams()
   const navigate = useNavigate()
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [programId])
-
   const program = programsData[programId]
 
-  // Redirect if program not found
-  if (!program) {
-    useEffect(() => {
+  useEffect(() => {
+    if (!program) {
       navigate('/')
-    }, [])
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [programId, program, navigate])
+
+  if (!program) {
     return null
   }
+
+  const theme = programThemes[programId] || programThemes['play-group']
 
   return (
     <div className="bg-slate-50 min-h-screen font-outfit relative">
       
       {/* 1. Breadcrumbs & Header Section */}
-      <div className="bg-gradient-to-b from-[#f3f8fe] to-white pt-6 pb-20 relative overflow-hidden">
+      <div className={`bg-gradient-to-b ${theme.heroBg} pt-6 pb-20 relative overflow-hidden`}>
         
         {/* Background drift doodles */}
         <StarDoodle className="absolute top-[10%] left-[8%] text-brand-yellow/30 w-10 h-10 animate-float-drift-1" />
@@ -326,7 +464,7 @@ export default function ProgramDetailsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Breadcrumbs */}
-          <nav className="flex items-center space-x-2 text-xs md:text-sm text-slate-500 mb-8 font-medium">
+          <nav className="flex items-center space-x-2 text-xs md:text-sm text-slate-600 mb-8 font-medium">
             <Link to="/" className="hover:text-brand-orange transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <Link to="/#programs" className="hover:text-brand-orange transition-colors">Programs</Link>
@@ -342,41 +480,41 @@ export default function ProgramDetailsPage() {
               <h1 className="font-fredoka text-5xl md:text-7xl font-black text-brand-blue leading-none tracking-tight uppercase">
                 {program.name}
               </h1>
-              <h2 className="text-xl md:text-2xl font-bold text-emerald-600 font-fredoka mt-2">
+              <h2 className={`text-xl md:text-2xl font-bold ${theme.accentText} font-fredoka mt-2`}>
                 {program.subtitle}
               </h2>
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0 pt-2">
+              <p className="text-slate-900 text-sm md:text-base leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0 pt-2">
                 {program.desc}
               </p>
 
               {/* Info Badges */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                <div className="flex items-center space-x-2.5 bg-white border border-slate-100/80 px-5 py-3.5 rounded-2xl shadow-sm">
-                  <div className="bg-pink-50 p-2 rounded-xl text-pink-500">
+                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-5 py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
+                  <div className={`${theme.badgeIconBg} p-2 rounded-xl ${theme.badgeIconColor}`}>
                     <Users className="w-5 h-5" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Age Group</div>
+                    <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Age Group</div>
                     <div className="text-xs md:text-sm font-bold text-brand-blue">{program.age}</div>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-2.5 bg-white border border-slate-100/80 px-5 py-3.5 rounded-2xl shadow-sm">
+                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-5 py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
                   <div className="bg-sky-50 p-2 rounded-xl text-sky-500">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Class Duration</div>
+                    <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Class Duration</div>
                     <div className="text-xs md:text-sm font-bold text-brand-blue">{program.duration}</div>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-2.5 bg-white border border-slate-100/80 px-5 py-3.5 rounded-2xl shadow-sm">
+                <div className={`flex items-center space-x-2.5 bg-white border-2 ${theme.badgeBorder} px-5 py-3.5 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md`}>
                   <div className="bg-purple-50 p-2 rounded-xl text-purple-500">
                     <Baby className="w-5 h-5" />
                   </div>
                   <div className="text-left">
-                    <div className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Class Size</div>
+                    <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Class Size</div>
                     <div className="text-xs md:text-sm font-bold text-brand-blue">{program.size}</div>
                   </div>
                 </div>
@@ -393,11 +531,11 @@ export default function ProgramDetailsPage() {
                 />
               </div>
               {/* Overlapping circular illustrated badge */}
-              <div className="absolute -bottom-6 left-12 w-18 h-18 rounded-full bg-emerald-500 border-4 border-white flex items-center justify-center shadow-lg transform translate-y-1">
+              <div className={`absolute -bottom-6 left-12 w-18 h-18 rounded-full ${theme.outcomesIconBg} border-4 border-white flex items-center justify-center shadow-lg transform translate-y-1`}>
                 <img 
                   src={program.programIllustration} 
                   alt="Badge Icon" 
-                  className="w-12 h-12 object-contain" 
+                  className="w-12 h-12 object-contain animate-float" 
                 />
               </div>
             </div>
@@ -422,59 +560,59 @@ export default function ProgramDetailsPage() {
                 <div className="w-12 h-1 bg-brand-yellow rounded-full mt-2" />
               </div>
 
-              <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light">
+              <p className="text-slate-900 text-sm md:text-base leading-relaxed font-normal">
                 {program.overview}
               </p>
 
               {/* Circles Row */}
               <div className="grid grid-cols-3 sm:grid-cols-5 gap-4 pt-6 text-center">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-[#f0faf5] border border-emerald-100 text-emerald-500 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#f4fbf7] border-2 border-emerald-300 text-emerald-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Smile className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-700 mt-2 leading-tight">Happy & Secure<br/>Environment</span>
+                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Happy & Secure<br/>Environment</span>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-[#fffbf0] border border-amber-100 text-amber-500 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#fffbf0] border-2 border-amber-300 text-amber-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Users className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-700 mt-2 leading-tight">Social & Emotional<br/>Development</span>
+                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Social & Emotional<br/>Development</span>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-[#f0f7ff] border border-blue-100 text-blue-500 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#f0f7ff] border-2 border-blue-300 text-blue-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Baby className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-700 mt-2 leading-tight">Hands-On<br/>Learning</span>
+                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Hands-On<br/>Learning</span>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-[#f5f0ff] border border-purple-100 text-purple-500 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#f5f0ff] border-2 border-purple-300 text-purple-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Brain className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-700 mt-2 leading-tight">Cognitive<br/>Development</span>
+                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Cognitive<br/>Development</span>
                 </div>
 
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-[#fff5f6] border border-pink-100 text-pink-500 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#fff5f6] border-2 border-pink-300 text-pink-600 flex items-center justify-center shadow-sm hover:scale-110 transition-transform duration-300 hover:shadow-md">
                     <Heart className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-bold text-slate-700 mt-2 leading-tight">Individual<br/>Attention</span>
+                  <span className="text-[10px] font-bold text-slate-800 mt-2 leading-tight">Individual<br/>Attention</span>
                 </div>
               </div>
             </div>
 
             {/* Right: Outcomes Card Checklist */}
             <div className="lg:col-span-5">
-              <div className="bg-[#f0faf5] border-2 border-[#d8f3e5] rounded-3xl p-6 md:p-8 shadow-sm">
-                <h3 className="text-base md:text-lg font-bold font-fredoka text-emerald-700 tracking-wide uppercase mb-6">
+              <div className={`${theme.outcomesBg} border-2 ${theme.outcomesBorder} rounded-3xl p-6 md:p-8 shadow-md hover:shadow-lg transition-all duration-300`}>
+                <h3 className={`text-base md:text-lg font-bold font-fredoka ${theme.accentText} tracking-wide uppercase mb-6`}>
                   What Your Child Will Learn
                 </h3>
                 <ul className="space-y-4">
                   {program.outcomes.map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3 text-xs md:text-sm text-slate-700 leading-relaxed font-normal">
-                      <div className="bg-emerald-500 text-white rounded-full p-0.5 mt-0.5 flex-shrink-0">
+                     <li key={index} className="flex items-start space-x-3 text-xs md:text-sm text-slate-900 leading-relaxed font-semibold">
+                      <div className={`${theme.outcomesIconBg} text-white rounded-full p-0.5 mt-0.5 flex-shrink-0 shadow-sm`}>
                         <Check className="w-3.5 h-3.5 stroke-[3]" />
                       </div>
                       <span>{item}</span>
@@ -489,7 +627,7 @@ export default function ProgramDetailsPage() {
       </div>
 
       {/* 3. Key Areas of Development */}
-      <div className="py-16 bg-[#f8fbff] border-y border-slate-100/50">
+      <div className="py-16 bg-[#f8fbff] border-y border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -502,18 +640,19 @@ export default function ProgramDetailsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {program.keyAreas.map((area, index) => {
               const AreaIcon = area.Icon
+              const style = keyAreaStyles[index % keyAreaStyles.length]
               return (
                 <div 
                   key={index}
-                  className={`border rounded-2xl p-5 pt-8 pb-8 bg-white flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow duration-300 ${area.color}`}
+                  className={`border-2 rounded-3xl p-6 pt-8 pb-8 ${style.bgClass} ${style.borderClass} flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300`}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white border border-slate-100 flex items-center justify-center shadow-sm mb-4">
-                    <AreaIcon className="w-6 h-6 text-brand-blue" />
+                  <div className={`w-12 h-12 rounded-xl bg-white border-2 ${style.iconBgClass} flex items-center justify-center shadow-sm mb-4`}>
+                    <AreaIcon className={`w-6 h-6 ${style.iconColorClass}`} />
                   </div>
                   <h4 className="font-fredoka font-bold text-brand-blue text-sm mb-3">
                     {area.title}
                   </h4>
-                  <p className="text-slate-500 text-xs leading-relaxed font-light">
+                  <p className="text-slate-900 text-xs leading-relaxed font-medium">
                     {area.desc}
                   </p>
                 </div>
@@ -527,7 +666,7 @@ export default function ProgramDetailsPage() {
       {/* 4. A Typical Day & Teaching Approach */}
       <div className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
             
             {/* Timeline: A Typical Day */}
             <div className="lg:col-span-4 space-y-6">
@@ -538,21 +677,28 @@ export default function ProgramDetailsPage() {
                 <div className="w-12 h-1 bg-brand-yellow rounded-full mt-2" />
               </div>
 
-              <div className="space-y-4 max-h-[400px] overflow-y-auto pr-2">
+              {/* Vertical connected timeline design */}
+              <div className="relative border-l-2 border-slate-200 ml-4 pl-6 space-y-6 max-h-[420px] overflow-y-auto pr-2 py-2">
                 {program.typicalDay.map((sched, index) => (
-                  <div key={index} className="flex items-center space-x-4">
-                    <span className="text-[10px] font-bold tracking-wider text-emerald-600 bg-emerald-50 border border-emerald-100 px-3 py-1.5 rounded-full whitespace-nowrap">
-                      {sched.time}
-                    </span>
-                    <span className="text-xs md:text-sm text-slate-700 font-semibold">{sched.event}</span>
+                  <div key={index} className="relative flex items-center">
+                    {/* Timeline dot */}
+                    <div className={`absolute -left-[32px] w-3.5 h-3.5 rounded-full bg-white border-[3px] ${theme.primaryColor === 'pink' ? 'border-pink-500' : theme.primaryColor === 'emerald' ? 'border-emerald-500' : theme.primaryColor === 'amber' ? 'border-amber-500' : theme.primaryColor === 'blue' ? 'border-blue-500' : 'border-orange-500'} shadow-sm`} />
+                    
+                    {/* Timeline Event Card */}
+                    <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-4 bg-white border-2 border-slate-100 hover:border-slate-300 p-3 rounded-2xl shadow-sm transition-all duration-300 w-full hover:shadow-md">
+                      <span className={`text-[10px] font-bold tracking-wider ${theme.timelineBadge} px-3 py-1 rounded-full whitespace-nowrap w-fit border`}>
+                        {sched.time}
+                      </span>
+                      <span className="text-xs md:text-sm text-slate-900 font-semibold">{sched.event}</span>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Photo & Einstein Quote */}
-            <div className="lg:col-span-4 flex flex-col justify-between">
-              <div className="rounded-3xl border border-slate-100 shadow-lg overflow-hidden h-[240px]">
+            <div className="lg:col-span-4 flex flex-col justify-between space-y-6">
+              <div className="rounded-3xl border-2 border-slate-200 shadow-md overflow-hidden h-[240px] hover:shadow-lg transition-shadow duration-300">
                 <img 
                   src={program.typicalImage} 
                   alt="Classroom Activity" 
@@ -561,32 +707,34 @@ export default function ProgramDetailsPage() {
               </div>
 
               {/* Quote Block */}
-              <div className="bg-[#f0faf5] border-l-4 border-emerald-500 p-4 rounded-r-2xl mt-6">
-                <p className="text-xs md:text-sm text-emerald-800 italic font-semibold leading-relaxed">
+              <div className={`${theme.quoteBg} border-l-4 ${theme.quoteBorder} p-5 rounded-r-2xl shadow-sm`}>
+                <p className={`text-xs md:text-sm ${theme.quoteText} italic font-semibold leading-relaxed`}>
                   "Play is the highest form of research."
                 </p>
-                <p className="text-[10px] text-emerald-600 font-bold mt-1.5 text-right">— Albert Einstein</p>
+                <p className={`text-[10px] ${theme.quoteAuthor} font-bold mt-1.5 text-right`}>— Albert Einstein</p>
               </div>
             </div>
 
-            {/* Teaching Approach */}
-            <div className="lg:col-span-4 space-y-6">
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold font-fredoka text-brand-blue tracking-wide uppercase">
-                  Our Teaching Approach
-                </h3>
-                <div className="w-12 h-1 bg-brand-yellow rounded-full mt-2" />
-              </div>
+            {/* Teaching Approach in a matching styled card */}
+            <div className={`lg:col-span-4 border-2 ${theme.outcomesBorder} ${theme.outcomesBg} rounded-3xl p-6 md:p-8 shadow-sm flex flex-col justify-between space-y-6 hover:shadow-md transition-shadow duration-300`}>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-xl md:text-2xl font-bold font-fredoka text-brand-blue tracking-wide uppercase">
+                    Our Approach
+                  </h3>
+                  <div className="w-12 h-1 bg-brand-yellow rounded-full mt-2" />
+                </div>
 
-              <p className="text-slate-600 text-xs md:text-sm leading-relaxed font-light">
-                We follow a play-based, child-centered curriculum that encourages exploration and discovery. Our caring educators create meaningful experiences that help children learn with joy and confidence.
-              </p>
+                <p className="text-slate-900 text-xs md:text-sm leading-relaxed font-semibold">
+                  We follow a play-based, child-centered curriculum that encourages exploration and discovery. Our caring educators create meaningful experiences that help children learn with joy and confidence.
+                </p>
+              </div>
 
               <ul className="space-y-3 pt-2">
                 {program.approach.map((item, index) => (
-                  <li key={index} className="flex items-center space-x-3 text-xs md:text-sm text-slate-700 font-semibold">
-                    <div className="bg-emerald-500 text-white rounded-full p-0.5 flex-shrink-0">
-                      <Check className="w-3 h-3 stroke-[3]" />
+                  <li key={index} className="flex items-center space-x-3 text-xs md:text-sm text-slate-900 font-semibold">
+                    <div className={`${theme.outcomesIconBg} text-white rounded-full p-0.5 flex-shrink-0 shadow-sm`}>
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
                     <span>{item}</span>
                   </li>
@@ -601,14 +749,14 @@ export default function ProgramDetailsPage() {
       {/* 5. Call to Action Banner */}
       <div className="py-12 bg-white pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#f0faf5] border border-[#e1f5e8] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center relative overflow-hidden shadow-sm">
+          <div className={`border-2 ${theme.ctaBorder} ${theme.ctaBg} rounded-3xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center relative overflow-hidden shadow-md transition-shadow duration-300 hover:shadow-lg`}>
             
             {/* Background design doodles */}
             <StarDoodle className="absolute -bottom-6 -left-6 text-brand-yellow/15 w-24 h-24 pointer-events-none select-none" />
 
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 relative z-10 text-center md:text-left">
               {/* Watercolor child avatar */}
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border border-slate-100 flex items-center justify-center p-1 overflow-hidden shadow-md flex-shrink-0">
+              <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-white border-2 ${theme.badgeBorder} flex items-center justify-center p-1 overflow-hidden shadow-md flex-shrink-0`}>
                 <img 
                   src={detailsChildAvatar} 
                   alt="Smiling Kid" 
@@ -616,10 +764,10 @@ export default function ProgramDetailsPage() {
                 />
               </div>
               <div>
-                <h3 className="font-fredoka font-bold text-emerald-800 text-xl md:text-2xl">
+                <h3 className="font-fredoka font-bold text-brand-blue text-xl md:text-2xl">
                   Give Your Child The Perfect Start!
                 </h3>
-                <p className="text-slate-600 text-xs md:text-sm font-normal mt-1 leading-relaxed max-w-xl">
+                <p className="text-slate-800 text-xs md:text-sm font-medium mt-1 leading-relaxed max-w-xl">
                   Admissions are now open for {program.titleName}. Limited seats available. Get in touch with us to enroll.
                 </p>
               </div>
@@ -628,7 +776,7 @@ export default function ProgramDetailsPage() {
             <div className="mt-6 md:mt-0 relative z-10 flex-shrink-0">
               <Link
                 to="/enroll"
-                className="bg-emerald-600 hover:bg-brand-orange text-white font-fredoka font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm flex items-center space-x-1"
+                className={`text-white ${theme.ctaButton} font-fredoka font-semibold px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm flex items-center space-x-1`}
               >
                 <span>Enroll Now</span>
                 <ChevronRight className="w-4 h-4" />
@@ -642,3 +790,4 @@ export default function ProgramDetailsPage() {
     </div>
   )
 }
+
