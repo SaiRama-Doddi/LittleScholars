@@ -98,29 +98,38 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation links */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {navLinks.map((link) => {
-              const active = isLinkActive(link.href)
-              return (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={`font-semibold text-sm xl:text-base transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 font-outfit ${
-                    active 
-                      ? 'text-brand-orange after:w-full' 
-                      : 'text-brand-blue hover:text-brand-orange after:w-0 hover:after:w-full'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              )
-            })}
+          {/* Desktop Navigation & Enroll Button (Grouped on the Right) */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <div className="flex items-center space-x-6">
+              {navLinks.map((link) => {
+                const active = isLinkActive(link.href)
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className={`font-semibold text-sm xl:text-base transition-colors duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-brand-orange after:transition-all after:duration-300 font-outfit ${
+                      active 
+                        ? 'text-brand-orange after:w-full' 
+                        : 'text-brand-blue hover:text-brand-orange after:w-0 hover:after:w-full'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              })}
+            </div>
+
+            <Link
+              to="/enroll"
+              className="bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 font-fredoka text-sm"
+            >
+              Enroll Now
+            </Link>
           </div>
 
-          {/* Action Button & Hamburger */}
-          <div className="flex items-center space-x-4">
+          {/* Mobile Hamburger & Enroll Button (Grouped on the Right) */}
+          <div className="lg:hidden flex items-center space-x-4">
             <Link
               to="/enroll"
               className="hidden sm:inline-block bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 font-fredoka text-sm"
@@ -128,10 +137,9 @@ export default function Navbar() {
               Enroll Now
             </Link>
 
-            {/* Mobile menu toggle */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-brand-blue hover:text-brand-orange focus:outline-none transition-colors"
+              className="p-2 text-brand-blue hover:text-brand-orange focus:outline-none transition-colors"
               aria-expanded={isOpen}
               aria-label="Toggle menu"
             >

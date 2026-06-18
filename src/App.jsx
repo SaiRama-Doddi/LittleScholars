@@ -8,6 +8,7 @@ import ContactPage from './pages/ContactPage'
 import AdmissionsPage from './pages/AdmissionsPage'
 import EnrollPage from './pages/EnrollPage'
 import Footer from './components/Footer'
+import FloatingBackgroundIcons from './components/FloatingBackgroundIcons'
 
 // ScrollToTop component to reset viewport scroll position on navigate
 function ScrollToTop() {
@@ -22,8 +23,9 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth">
+    <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth relative">
       <ScrollToTop />
+      <FloatingBackgroundIcons />
       <div>
         {/* Header Block */}
         <TopBar />
