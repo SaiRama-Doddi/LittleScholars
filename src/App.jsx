@@ -22,7 +22,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-between overflow-x-hidden font-outfit select-none scroll-smooth">
+    <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth">
       <ScrollToTop />
       <div>
         {/* Header Block */}
