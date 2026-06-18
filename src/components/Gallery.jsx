@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Camera, Image as ImageIcon } from 'lucide-react'
 import galleryLearning from '../assets/gallery_learning.png'
 import galleryPlay from '../assets/gallery_play.png'
@@ -60,12 +61,12 @@ export default function Gallery() {
               Take a peek into the daily adventures of our little scholars. Our gallery highlights active learning, playful exploration, and creative expression.
             </p>
             <div className="pt-2">
-              <a
-                href="#contact"
+              <Link
+                to="/gallery"
                 className="inline-block bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-fredoka"
               >
                 View Gallery
-              </a>
+              </Link>
             </div>
           </div>
 
