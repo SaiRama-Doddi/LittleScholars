@@ -37,16 +37,20 @@ export default function Navbar() {
       e.preventDefault()
       const targetId = href.substring(2)
       
+      setIsOpen(false) // Close mobile drawer first
+      
       if (location.pathname === '/') {
-        const element = document.getElementById(targetId)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
-        }
+        // Wait 300ms for mobile drawer transition to finish so scroll is smooth and not blocked
+        setTimeout(() => {
+          const element = document.getElementById(targetId)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 300)
       } else {
         // Navigate to home first, and pass the target element in state
         navigate('/', { state: { scrollTo: targetId } })
       }
-      setIsOpen(false)
     } else {
       // Normal routing page
       setIsOpen(false)
@@ -78,21 +82,21 @@ export default function Navbar() {
           <Link 
             to="/" 
             onClick={(e) => handleNavClick(e, '/#home')} 
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-2 sm:space-x-3 group flex-shrink"
           >
-            <div className="relative">
+            <div className="relative flex-shrink-0">
               <img 
                 src={logoImg} 
                 alt="Little Scholars Logo" 
-                className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-brand-blue shadow-md transition-transform duration-300 group-hover:scale-105"
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-brand-blue shadow-md transition-transform duration-300 group-hover:scale-105"
               />
-              <GraduationCap className="absolute -top-1 -right-1 w-5 h-5 text-brand-blue bg-white rounded-full p-0.5 border border-brand-blue/30 animate-bounce" />
+              <GraduationCap className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 text-brand-blue bg-white rounded-full p-0.5 border border-brand-blue/30 animate-bounce" />
             </div>
             <div className="flex flex-col">
-              <span className="font-fredoka text-lg md:text-xl font-bold text-brand-blue leading-tight tracking-tight uppercase">
+              <span className="font-fredoka text-sm sm:text-base md:text-xl text-brand-blue leading-tight tracking-tight uppercase" style={{ fontWeight: 650 }}>
                 Little Scholars
               </span>
-              <span className="text-[10px] md:text-xs text-brand-orange font-semibold tracking-widest uppercase">
+              <span className="text-[8px] sm:text-[9px] md:text-xs text-brand-orange font-bold tracking-widest uppercase">
                 International Preschool
               </span>
             </div>
@@ -151,7 +155,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-50 p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[9999] p-6 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -204,7 +208,7 @@ export default function Navbar() {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity"
+          className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] transition-opacity"
         />
       )}
     </nav>

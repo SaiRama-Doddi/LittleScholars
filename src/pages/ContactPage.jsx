@@ -35,6 +35,22 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Contact Form Submitted:', formData)
+    
+    // Construct the WhatsApp message text
+    const messageText = `Hello Little Scholars International Preschool,
+
+I would like to get in touch. Here are my details:
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Email:* ${formData.email}
+*Subject:* ${formData.subject}
+*Message:* ${formData.message}`
+
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=919701768381&text=${encodeURIComponent(messageText)}`
+    
+    // Redirect to WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank')
+    
     setIsSubmitted(true)
     setTimeout(() => {
       setFormData({ name: '', phone: '', email: '', subject: '', message: '' })

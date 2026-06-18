@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative bg-[#f0f7ff] overflow-hidden">
       {/* Slider Wrapper - Perfectly responsive aspect ratio */}
-      <div className="relative w-full aspect-[2.45/1] overflow-hidden">
+      <div className="relative w-full aspect-[1.35/1] sm:aspect-[1.8/1] md:aspect-[2.45/1] overflow-hidden">
         {banners.map((banner, index) => (
           <div
             key={index}
