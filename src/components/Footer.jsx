@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Phone, MapPin, Mail, Send, CheckCircle } from 'lucide-react'
 import logoImg from '../assets/logo.jfif'
 
-export default function Footer() {
+export default function Footer({ isCompact }) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -13,21 +13,6 @@ export default function Footer() {
   const [submitted, setSubmitted] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
-
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Enquiry Submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setFormData({ name: '', phone: '', email: '', message: '' })
-      setSubmitted(false)
-    }, 5000)
-  }
 
   const handleNavClick = (e, href) => {
     if (href.startsWith('/#')) {
@@ -44,6 +29,38 @@ export default function Footer() {
       }
     }
   }
+
+  if (isCompact) {
+    return (
+      <footer className="bg-[#051b3d] text-slate-300 py-3 font-outfit border-t border-slate-800/50 relative z-30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-[10px] sm:text-xs text-slate-500 font-light text-center gap-1.5">
+            <p>&copy; 2025 Little Scholars International Preschool. All Rights Reserved.</p>
+            <div className="flex space-x-4">
+              <Link to="/" onClick={(e) => handleNavClick(e, '/#about')} className="hover:text-brand-yellow">Privacy Policy</Link>
+              <Link to="/contact" className="hover:text-brand-yellow">Terms of Service</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    )
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Enquiry Submitted:', formData)
+    setSubmitted(true)
+    setTimeout(() => {
+      setFormData({ name: '', phone: '', email: '', message: '' })
+      setSubmitted(false)
+    }, 5000)
+  }
+
 
   const quickLinks = [
     { name: 'Home', href: '/#home' },
@@ -64,7 +81,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer id="contact" className="bg-[#051b3d] text-slate-300 pt-16 pb-6 font-outfit relative overflow-hidden">
+    <footer id="contact" className="bg-[#051b3d] text-slate-300 pt-10 md:pt-12 pb-6 font-outfit relative overflow-hidden">
       
       {/* Footer Top Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 border-b border-slate-700/50">

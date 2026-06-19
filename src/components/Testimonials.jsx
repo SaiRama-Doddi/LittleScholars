@@ -34,7 +34,7 @@ export default function Testimonials() {
   }, [testimonials.length])
 
   return (
-    <section className="py-16 md:py-24 bg-white font-outfit relative overflow-hidden">
+    <section className="pt-8 md:pt-12 pb-10 md:pb-12 bg-white font-outfit relative overflow-hidden">
       
       {/* Decorative stars / bubbles */}
       <div className="absolute top-10 right-20 text-brand-yellow/15 w-8 h-8 pointer-events-none">
@@ -53,7 +53,7 @@ export default function Testimonials() {
               <span className="inline-block text-sm font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-3 py-1.5 rounded-md border border-brand-yellow/30">
                 Parent Testimonials
               </span>
-              <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-4 leading-tight">
+              <h2 className="text-3xl md:text-[36px] font-fredoka font-bold text-brand-blue mt-4 leading-tight">
                 What Parents Say <br />
                 <span className="text-brand-orange">About Us</span>
               </h2>

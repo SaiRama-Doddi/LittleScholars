@@ -31,7 +31,7 @@ export default function Gallery() {
   ]
 
   return (
-    <section id="gallery" className="py-16 md:py-24 bg-brand-lightyellow/50 font-outfit relative overflow-hidden">
+    <section id="gallery" className="pt-8 md:pt-12 pb-16 md:pb-24 bg-brand-lightyellow/50 font-outfit relative overflow-hidden">
       
       {/* Playful background graphics */}
       <div className="absolute top-10 left-10 text-brand-orange/10 pointer-events-none select-none">
@@ -52,9 +52,8 @@ export default function Gallery() {
                 <Camera className="w-4 h-4 mr-2" />
                 Gallery
               </span>
-              <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-4 leading-tight">
-                Moments That <br />
-                <span className="text-brand-orange">Matter</span>
+              <h2 className="text-3xl md:text-[36px] font-fredoka font-bold text-brand-blue mt-4 leading-tight">
+                Moments That <span className="text-brand-orange">Matter</span>
               </h2>
             </div>
             <p className="text-black text-base md:text-lg font-normal leading-relaxed">

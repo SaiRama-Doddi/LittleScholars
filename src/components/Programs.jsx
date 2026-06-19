@@ -74,7 +74,7 @@ export default function Programs() {
   ]
 
   return (
-    <section id="programs" className="pt-10 md:pt-14 pb-20 md:pb-28 bg-gradient-to-b from-[#f8fbff] to-white font-outfit relative overflow-hidden scroll-mt-28">
+    <section id="programs" className="pt-10 md:pt-14 pb-6 md:pb-8 bg-gradient-to-b from-[#f8fbff] to-white font-outfit relative overflow-hidden scroll-mt-28">
       
       {/* Background handdrawn doodles to match the mockup */}
       <StarDoodle className="absolute top-[8%] left-[3%] text-brand-yellow/30 opacity-70 w-12 h-12 hidden lg:block animate-float-drift-1" />
@@ -105,7 +105,7 @@ export default function Programs() {
         </div>
 
         {/* Programs Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 xl:gap-8 mb-0">
           {programList.map((prog, index) => (
             <Link
               key={index}

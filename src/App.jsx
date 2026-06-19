@@ -23,6 +23,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const location = useLocation()
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth relative">
       <ScrollToTop />
@@ -44,7 +46,7 @@ export default function App() {
       </div>
 
       {/* Footer Block */}
-      <Footer />
+      <Footer isCompact={location.pathname === '/contact'} />
     </div>
   )
 }

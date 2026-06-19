@@ -13,7 +13,8 @@ import {
   Shield, 
   Star, 
   Heart,
-  Navigation
+  Navigation,
+  X
 } from 'lucide-react'
 import kidsImg from '../assets/contact_hero_kids.webp'
 
@@ -26,6 +27,7 @@ export default function ContactPage() {
     message: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [showMapModal, setShowMapModal] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -59,10 +61,10 @@ I would like to get in touch. Here are my details:
   }
 
   return (
-    <div className="bg-[#f8fafc] font-outfit min-h-screen pb-16 animate-page-fade">
+    <div className="bg-[#f8fafc] font-outfit min-h-screen lg:h-[calc(100vh-112px)] lg:min-h-[580px] flex flex-col justify-between overflow-x-hidden animate-page-fade relative">
       
-      {/* 1. HERO BANNER SECTION (White background with blue wavy divider) */}
-      <section className="relative bg-white overflow-hidden pt-8 md:pt-12 pb-0">
+      {/* 1. HERO & CONTACT FORM SECTION (White background with blue wavy divider) */}
+      <section className="relative bg-white overflow-hidden pt-4 md:pt-6 pb-12 md:pb-14 lg:pb-16 flex-grow flex items-center">
         
         {/* Paper Airplane Doodle (Top Left) */}
         <div className="absolute top-6 left-6 md:top-10 md:left-16 text-slate-300 pointer-events-none select-none animate-float">
@@ -81,46 +83,193 @@ I would like to get in touch. Here are my details:
           <Star className="w-6 h-6 fill-brand-yellow text-brand-yellow" />
         </div>
 
-        {/* Floating Stars (Near Kids Head - Top Right) */}
+        {/* Floating Stars (Top Right) */}
         <div className="absolute top-8 right-6 md:top-12 md:right-20 text-brand-yellow flex space-x-1 animate-pulse-slow">
           <Star className="w-5 h-5 fill-brand-yellow text-brand-yellow" />
           <Star className="w-3.5 h-3.5 fill-brand-yellow text-brand-yellow mt-3" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             
-            {/* Left Column: Heading and Text */}
-            <div className="lg:col-span-6 pb-16 md:pb-24 lg:pb-32 text-center lg:text-left space-y-4 md:space-y-6">
-              <h1 className="font-fredoka text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-blue leading-tight tracking-tight uppercase">
-                Contact Us
-              </h1>
-              <h2 className="font-fredoka text-xl sm:text-2xl md:text-3xl font-bold text-brand-orange">
-                We'd Love To Hear From You!
-              </h2>
-              
-              {/* Star Icon below subtitle */}
-              <div className="flex justify-center lg:justify-start">
-                <Star className="w-6 h-6 fill-brand-yellow text-brand-yellow animate-pulse" />
+            {/* Left Column: Get In Touch */}
+            <div className="lg:col-span-5 space-y-4 text-left">
+              <div>
+                <h1 className="font-fredoka text-3xl md:text-[36px] font-extrabold text-brand-blue leading-tight tracking-tight uppercase">
+                  Get In Touch
+                </h1>
+                <h2 className="font-fredoka text-base sm:text-lg md:text-xl font-bold text-brand-orange mt-0.5">
+                  We'd Love To Hear From You!
+                </h2>
+                <div className="h-0.5 w-16 bg-brand-yellow mt-2" />
               </div>
 
-              <p className="text-black text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal relative">
-                Have questions or want to know more about our programs? We're here to help you!
-                
-                {/* Small star doodle floating to the right of text */}
-                <span className="absolute -right-12 top-1/2 -translate-y-1/2 text-brand-yellow hidden xl:inline-block animate-pulse-slow">
-                  <Star className="w-5 h-5 fill-brand-yellow text-brand-yellow" />
-                </span>
-              </p>
+              <div className="space-y-2.5">
+                {/* Location Card */}
+                <div 
+                  onClick={() => setShowMapModal(true)}
+                  className="bg-white p-3.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3.5 hover:shadow-lg transition-shadow duration-300 cursor-pointer group active:scale-[0.98] transition-all"
+                  title="Click to view location map"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                    <MapPin className="w-4.5 h-4.5" />
+                  </div>
+                  <div>
+                    <h3 className="font-fredoka font-bold text-brand-blue text-sm group-hover:text-brand-orange transition-colors">Our Location</h3>
+                    <p className="text-black text-xs mt-0.5 leading-relaxed font-normal">
+                      Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
+                    </p>
+                  </div>
+                </div>
+
+                {/* Phone Numbers Card */}
+                <div className="bg-white p-3.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3.5 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Phone className="w-4.5 h-4.5 animate-pulse" />
+                  </div>
+                  <div>
+                    <h3 className="font-fredoka font-bold text-brand-blue text-sm">Phone Numbers</h3>
+                    <p className="text-black text-xs mt-0.5 font-normal">
+                      9492 8484 89 / 9491 7373 99
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Address Card */}
+                <div className="bg-white p-3.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3.5 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Mail className="w-4.5 h-4.5" />
+                  </div>
+                  <div>
+                    <h3 className="font-fredoka font-bold text-brand-blue text-sm">Email Address</h3>
+                    <p className="text-black text-xs mt-0.5 font-normal">
+                      littlescholarsips@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Right Column: Kids Playing with Phones (Stretches to top of hero, cut by wave on bottom) */}
-            <div className="lg:col-span-6 flex justify-center lg:justify-end z-10 relative">
-              <img 
-                src={kidsImg} 
-                alt="Little Scholars Preschool Contact Banner" 
-                className="w-full max-w-md md:max-w-xl h-auto max-h-[300px] sm:max-h-[450px] lg:max-h-[500px] object-contain pointer-events-none select-none"
-              />
+            {/* Right Column: Send Us A Message Form */}
+            <div className="lg:col-span-7">
+              <div className="bg-white rounded-xl p-4 sm:p-5 shadow-xl border border-slate-100/80 relative">
+                
+                {/* Form Title */}
+                <div className="mb-3 pb-1.5 relative">
+                  <h3 className="font-fredoka text-base md:text-lg font-bold text-brand-blue tracking-wider uppercase">
+                    Send Us A Message
+                  </h3>
+                  <div className="absolute bottom-0 left-0 h-[2.5px] w-12 bg-brand-yellow" />
+                </div>
+
+                {isSubmitted ? (
+                  <div className="py-12 flex flex-col items-center justify-center text-center space-y-4 animate-fade-in">
+                    <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center">
+                      <CheckCircle className="w-8 h-8" />
+                    </div>
+                    <h4 className="font-fredoka font-bold text-slate-800 text-lg">Message Sent!</h4>
+                    <p className="text-black max-w-sm font-semibold text-xs">
+                      Thank you. Your message has been received, and we'll get back to you shortly.
+                    </p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-2.5">
+                    {/* Name and Phone Row */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {/* Name Input */}
+                      <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-blue">
+                          <User className="w-4 h-4" />
+                        </div>
+                        <input
+                          type="text"
+                          name="name"
+                          required
+                          placeholder="Your Name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-lg py-2 pl-9 pr-3.5 text-xs md:text-sm text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
+                        />
+                      </div>
+
+                      {/* Phone Input */}
+                      <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-blue">
+                          <Phone className="w-4 h-4" />
+                        </div>
+                        <input
+                          type="tel"
+                          name="phone"
+                          required
+                          placeholder="Your Phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-lg py-2 pl-9 pr-3.5 text-xs md:text-sm text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Email Input */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-blue">
+                        <Mail className="w-4 h-4" />
+                      </div>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-lg py-2 pl-9 pr-3.5 text-xs md:text-sm text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
+                      />
+                    </div>
+
+                    {/* Subject Input */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-brand-blue">
+                        <Tag className="w-4 h-4" />
+                      </div>
+                      <input
+                        type="text"
+                        name="subject"
+                        required
+                        placeholder="Subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-lg py-2 pl-9 pr-3.5 text-xs md:text-sm text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
+                      />
+                    </div>
+
+                    {/* Message Input */}
+                    <div className="relative">
+                      <div className="absolute top-2 flex items-start pointer-events-none text-brand-blue">
+                        <div className="pl-3 pt-0.5">
+                          <MessageSquare className="w-4 h-4" />
+                        </div>
+                      </div>
+                      <textarea
+                        name="message"
+                        rows="2"
+                        required
+                        placeholder="Your Message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-lg py-2 pl-9 pr-3.5 text-xs md:text-sm text-slate-800 placeholder-slate-400 focus:outline-none transition-colors resize-none"
+                      />
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      type="submit"
+                      className="w-full bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-fredoka font-bold py-2.5 px-6 rounded-xl flex justify-between items-center transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none text-base"
+                    >
+                      <span className="w-full text-center pl-4">Send Message</span>
+                      <Send className="w-4 h-4 flex-shrink-0" />
+                    </button>
+                  </form>
+                )}
+              </div>
             </div>
 
           </div>
@@ -128,7 +277,7 @@ I would like to get in touch. Here are my details:
 
         {/* Smooth Wavy Divider (z-20, yellow accent sits behind blue but peeks higher) */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
-          <svg viewBox="0 0 1440 160" preserveAspectRatio="none" className="relative block w-full h-[60px] md:h-[100px] lg:h-[130px]">
+          <svg viewBox="0 0 1440 160" preserveAspectRatio="none" className="relative block w-full h-[40px] md:h-[60px] lg:h-[80px]">
             {/* Yellow Accent Wave (peaks slightly higher) */}
             <path d="M0,82 C360,152 720,12 1080,112 C1260,142 1380,102 1440,82 L1440,160 L0,160 Z" fill="#fab818"></path>
             {/* Blue Main Wave */}
@@ -138,301 +287,66 @@ I would like to get in touch. Here are my details:
 
       </section>
 
-      {/* 2. MAIN LAYOUT (Get In Touch & Send Message Form) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16 relative z-30">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* Left Column: Get In Touch */}
-          <div className="lg:col-span-5 space-y-6">
-            <div>
-              <h2 className="font-fredoka text-xl font-bold text-brand-blue tracking-wider uppercase">
-                Get In Touch
-              </h2>
-              <div className="h-0.5 w-12 bg-brand-yellow mt-1" />
-            </div>
-
-            <div className="space-y-4">
-              {/* Location Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
+      {/* Map Modal Overlay */}
+      {showMapModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in text-left">
+          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-3xl w-full relative animate-scale-up flex flex-col max-h-[90vh]">
+            
+            {/* Modal Header */}
+            <div className="p-4 sm:p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+              <div className="flex items-start space-x-3">
+                <div className="bg-brand-blue text-brand-yellow p-2 rounded-xl flex-shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-base">Our Location</h3>
-                  <p className="text-black text-sm mt-1 leading-relaxed font-normal">
-                    Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
+                  <h4 className="font-fredoka font-bold text-brand-blue text-sm sm:text-base leading-tight">
+                    Little Scholars International Preschool
+                  </h4>
+                  <p className="text-black text-[10px] sm:text-xs mt-1 font-semibold leading-relaxed">
+                    Plot No:14, Kalki Nagar, Near Kerala Building, Srikakulam - 532005
                   </p>
                 </div>
               </div>
-
-              {/* Phone Numbers Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
-                  <Phone className="w-5 h-5 animate-pulse" />
-                </div>
-                <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-base">Phone Numbers</h3>
-                  <p className="text-black text-sm mt-1 font-normal">
-                    9492 8484 89 <br />
-                    9491 7373 99
-                  </p>
-                </div>
-              </div>
-
-              {/* Email Address Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-base">Email Address</h3>
-                  <p className="text-black text-sm mt-1 font-normal">
-                    littlescholarsips@gmail.com
-                  </p>
-                </div>
-              </div>
-
-              {/* School Timings Card */}
-              <div className="bg-white p-5 rounded-2xl shadow-sm border-2 border-slate-200 flex items-center space-x-4 hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-fredoka font-bold text-brand-blue text-base">School Timings</h3>
-                  <p className="text-black text-sm mt-1 font-normal leading-relaxed">
-                    Monday - Saturday : 8:30 AM - 5:30 PM <br />
-                    Sunday : Closed
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Send Us A Message Form */}
-          <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-100/80 relative">
-              
-              {/* Form Title */}
-              <div className="mb-6 pb-2 relative">
-                <h3 className="font-fredoka text-lg font-bold text-brand-blue tracking-wider uppercase">
-                  Send Us A Message
-                </h3>
-                <div className="absolute bottom-0 left-0 h-[3px] w-14 bg-brand-yellow" />
-              </div>
-
-              {isSubmitted ? (
-                <div className="py-12 flex flex-col items-center justify-center text-center space-y-4 animate-fade-in">
-                  <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center">
-                    <CheckCircle className="w-8 h-8" />
-                  </div>
-                  <h4 className="font-fredoka font-bold text-slate-800 text-lg">Message Sent!</h4>
-                  <p className="text-black max-w-sm font-semibold text-xs">
-                    Thank you. Your message has been received, and we'll get back to you shortly.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Name and Phone Row */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Name Input */}
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-blue">
-                        <User className="w-4 h-4" />
-                      </div>
-                      <input
-                        type="text"
-                        name="name"
-                        required
-                        placeholder="Your Name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-xl py-3 pl-11 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
-                      />
-                    </div>
-
-                    {/* Phone Input */}
-                    <div className="relative">
-                      <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-blue">
-                        <Phone className="w-4 h-4" />
-                      </div>
-                      <input
-                        type="tel"
-                        name="phone"
-                        required
-                        placeholder="Your Phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-xl py-3 pl-11 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Email Input */}
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-blue">
-                      <Mail className="w-4 h-4" />
-                    </div>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-xl py-3 pl-11 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
-                    />
-                  </div>
-
-                  {/* Subject Input */}
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-blue">
-                      <Tag className="w-4 h-4" />
-                    </div>
-                    <input
-                      type="text"
-                      name="subject"
-                      required
-                      placeholder="Subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-xl py-3 pl-11 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:outline-none transition-colors"
-                    />
-                  </div>
-
-                  {/* Message Input */}
-                  <div className="relative">
-                    <div className="absolute top-3.5 left-0 pl-3.5 flex items-start pointer-events-none text-brand-blue">
-                      <MessageSquare className="w-4 h-4" />
-                    </div>
-                    <textarea
-                      name="message"
-                      rows="4"
-                      required
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="w-full bg-white border border-slate-200 focus:border-brand-blue focus:ring-1 focus:ring-brand-blue rounded-xl py-3 pl-11 pr-4 text-xs text-slate-800 placeholder-slate-400 focus:outline-none transition-colors resize-none"
-                    />
-                  </div>
-
-                  {/* Submit Button (Yellow background, centered text, send arrow icon on right) */}
-                  <button
-                    type="submit"
-                    className="w-full bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-fredoka font-bold py-3.5 px-6 rounded-xl flex justify-between items-center transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none"
-                  >
-                    <span className="w-full text-center pl-4">Send Message</span>
-                    <Send className="w-4 h-4 flex-shrink-0" />
-                  </button>
-                </form>
-              )}
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* 3. GOOGLE MAP SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="relative bg-white rounded-3xl overflow-hidden shadow-md border border-slate-100 h-[400px]">
-          {/* Details Overlay Card */}
-          <div className="absolute top-4 left-4 right-4 md:right-auto md:w-80 z-20 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-lg border border-slate-100 space-y-4">
-            <div className="flex items-start space-x-3">
-              <div className="bg-brand-blue text-brand-yellow p-2 rounded-xl flex-shrink-0">
-                <MapPin className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="font-fredoka font-bold text-brand-blue text-sm">
-                  Little Scholars International Preschool
-                </h4>
-                <p className="text-black text-xs mt-1 leading-relaxed font-semibold">
-                  Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
-                </p>
-              </div>
+              <button 
+                onClick={() => setShowMapModal(false)}
+                className="text-slate-400 hover:text-brand-orange p-1.5 hover:bg-slate-100 rounded-full transition-colors focus:outline-none flex-shrink-0"
+                aria-label="Close Map Modal"
+              >
+                <X className="w-6 h-6" />
+              </button>
             </div>
 
-            <a 
-              href="https://www.google.com/maps/dir/?api=1&destination=Little+Scholars+International+Preschool+Kalki+Nagar+Srikakulam"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full bg-brand-blue hover:bg-brand-orange text-white font-bold py-2 px-4 rounded-xl flex justify-center items-center space-x-2 font-fredoka text-xs shadow transition-colors"
-            >
-              <span>Get Directions</span>
-              <Navigation className="w-3.5 h-3.5 fill-current rotate-45" />
-            </a>
-          </div>
-
-          {/* Google Map embed */}
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.0673410714777!2d83.8962657!3d18.3005886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c1507f35a5135%3A0xc48c089c17df20b0!2sKalki%20Nagar%2C%20Srikakulam%2C%20Andhra%20Pradesh%20532001!5e0!3m2!1sen!2sin!4v1718698000000!5m2!1sen!2sin" 
-            className="w-full h-full border-0" 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Little Scholars International Preschool Srikakulam Map"
-          />
-        </div>
-      </section>
-
-      {/* 4. FEATURES BADGES BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="bg-white border-2 border-slate-200 rounded-3xl py-8 px-6 md:px-10 shadow-sm">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* Friendly Environment */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
-                <Users className="w-5 h-5 text-brand-yellow" />
-              </div>
-              <div>
-                <h4 className="font-fredoka font-bold text-brand-blue text-sm">Friendly Environment</h4>
-                <p className="text-black text-xs mt-0.5 font-semibold">
-                  A warm and welcoming place for every child
-                </p>
-              </div>
+            {/* Map iframe Container */}
+            <div className="relative flex-grow h-[350px] sm:h-[400px] bg-slate-100">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3788.1999265009176!2d83.8771455751861!3d18.29246308275736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDE3JzMyLjkiTiA4M8KwNTInNDcuMCJF!5e0!3m2!1sen!2sin!4v1781838976880!5m2!1sen!2sin" 
+                className="w-full h-full border-0" 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Little Scholars International Preschool Srikakulam Map"
+              />
             </div>
 
-            {/* Safe & Secure */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
-                <Shield className="w-5 h-5 text-brand-yellow" />
-              </div>
-              <div>
-                <h4 className="font-fredoka font-bold text-brand-blue text-sm">Safe & Secure</h4>
-                <p className="text-black text-xs mt-0.5 font-semibold">
-                  Your child's safety is our top priority
-                </p>
-              </div>
-            </div>
-
-            {/* Quality Education */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 lg:border-r border-slate-200 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
-                <Star className="w-5 h-5 text-brand-yellow fill-brand-yellow" />
-              </div>
-              <div>
-                <h4 className="font-fredoka font-bold text-brand-blue text-sm">Quality Education</h4>
-                <p className="text-black text-xs mt-0.5 font-semibold">
-                  Learning through play and exploration
-                </p>
-              </div>
-            </div>
-
-            {/* Caring Teachers */}
-            <div className="flex items-center space-x-4 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 shadow-md">
-                <Heart className="w-5 h-5 text-brand-yellow fill-brand-yellow" />
-              </div>
-              <div>
-                <h4 className="font-fredoka font-bold text-brand-blue text-sm">Caring Teachers</h4>
-                <p className="text-black text-xs mt-0.5 font-semibold">
-                  Experienced and loving educators
-                </p>
-              </div>
+            {/* Modal Footer */}
+            <div className="p-4 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3">
+              <span className="text-[10px] sm:text-xs text-slate-500 font-semibold">
+                Admissions Open 2026-27
+              </span>
+              <a 
+                href="https://www.google.com/maps/dir/?api=1&destination=18.292463,83.877146"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto bg-brand-blue hover:bg-brand-orange text-white hover:text-brand-blue font-bold py-2.5 px-5 rounded-xl flex justify-center items-center space-x-2 font-fredoka text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
+              >
+                <span>Get Directions on Google Maps</span>
+                <Navigation className="w-4 h-4 fill-current rotate-45" />
+              </a>
             </div>
 
           </div>
         </div>
-      </section>
+      )}
 
     </div>
   )

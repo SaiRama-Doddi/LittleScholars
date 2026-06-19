@@ -158,22 +158,19 @@ export default function GalleryPage() {
   return (
     <div className="bg-slate-50 font-outfit min-h-screen animate-page-fade">
       
-      {/* 1. Gallery Hero Banner */}
-      <section className="relative w-full aspect-[2.45/1] overflow-hidden">
-        <img
-          src={galleryBannerImg}
-          alt="Little Scholars Gallery Banner"
-          className="w-full h-full object-cover object-top"
-          loading="eager"
-          fetchpriority="high"
-        />
-        {/* Overlay gradient mask to guarantee text contrast if banner text is overlayed, 
-            though the provided banner contains baked-in graphics. */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/30 via-transparent to-transparent pointer-events-none" />
-      </section>
+      {/* 1. Gallery Header */}
+      <div className="pt-10 pb-4 text-center max-w-4xl mx-auto px-4">
+        <h1 className="font-fredoka text-3xl md:text-5xl font-extrabold text-brand-blue uppercase tracking-tight">
+          Our Gallery
+        </h1>
+        <p className="font-fredoka text-base sm:text-lg md:text-xl font-bold text-brand-orange mt-1.5">
+          Beautiful Moments Captured At Little Scholars
+        </p>
+        <div className="h-1 w-20 bg-brand-yellow mx-auto mt-3 rounded-full" />
+      </div>
 
       {/* 2. Filter & Photos section */}
-      <section className="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 md:py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Category Filters */}
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">

@@ -24,25 +24,25 @@ export default function AdmissionsPage() {
       num: '01',
       title: 'Enquiry',
       desc: 'Fill the enquiry form or contact us.',
-      icon: <FileText className="w-6 h-6 text-brand-blue" />
+      icon: <FileText className="w-8 h-8 text-brand-blue" />
     },
     {
       num: '02',
       title: 'Counselling',
       desc: 'Our team will guide you about the best program.',
-      icon: <Users className="w-6 h-6 text-brand-blue" />
+      icon: <Users className="w-8 h-8 text-brand-blue" />
     },
     {
       num: '03',
       title: 'Application',
       desc: 'Submit the admission form with documents.',
-      icon: <ClipboardList className="w-6 h-6 text-brand-blue" />
+      icon: <ClipboardList className="w-8 h-8 text-brand-blue" />
     },
     {
       num: '04',
       title: 'Confirmation',
       desc: 'Once verified, we confirm the admission!',
-      icon: <ShieldCheck className="w-6 h-6 text-brand-blue" />
+      icon: <ShieldCheck className="w-8 h-8 text-brand-blue" />
     }
   ]
 
@@ -59,22 +59,22 @@ export default function AdmissionsPage() {
     {
       title: 'Safe & Secure',
       desc: 'Child safe environment with CCTV surveillance.',
-      icon: <Shield className="w-5 h-5 text-brand-blue" />
+      icon: <Shield className="w-7 h-7 text-brand-blue" />
     },
     {
       title: 'Experienced Faculty',
       desc: 'Qualified and caring teachers dedicated to your child.',
-      icon: <GraduationCap className="w-5 h-5 text-brand-blue" />
+      icon: <GraduationCap className="w-7 h-7 text-brand-blue" />
     },
     {
       title: 'Holistic Development',
       desc: 'Focus on academics, creativity, social and emotional growth.',
-      icon: <Sparkles className="w-5 h-5 text-brand-blue" />
+      icon: <Sparkles className="w-7 h-7 text-brand-blue" />
     },
     {
       title: 'Modern Infrastructure',
       desc: 'Bright classrooms and world-class learning facilities.',
-      icon: <Award className="w-5 h-5 text-brand-blue" />
+      icon: <Award className="w-7 h-7 text-brand-blue" />
     }
   ]
 
@@ -114,24 +114,24 @@ export default function AdmissionsPage() {
             <div className="lg:col-span-6 pb-16 md:pb-24 lg:pb-32 text-center lg:text-left space-y-4 md:space-y-6">
               
               {/* Admissions Open Capsule */}
-              <div className="inline-block bg-brand-blue text-white text-xs md:text-sm font-fredoka font-bold px-5 py-1.5 rounded-full tracking-wider uppercase">
+              <div className="inline-block bg-brand-blue text-white text-sm md:text-base font-fredoka font-bold px-6 py-2 rounded-full tracking-wider uppercase">
                 Admissions Open
               </div>
 
-              <h1 className="font-fredoka text-6xl sm:text-7xl lg:text-8xl font-black text-brand-blue leading-none uppercase">
+              <h1 className="font-fredoka text-7xl sm:text-8xl lg:text-[96px] font-black text-brand-blue leading-none uppercase">
                 2026-27
               </h1>
               
-              <h2 className="font-fredoka text-xl sm:text-2xl md:text-3xl font-bold text-brand-orange leading-tight">
+              <h2 className="font-fredoka text-2xl sm:text-3xl md:text-[36px] font-bold text-brand-orange leading-tight">
                 Give Your Child The Best Start <br /> For A Bright Future
               </h2>
               
               {/* Star Icon below subtitle */}
               <div className="flex justify-center lg:justify-start">
-                <Star className="w-6 h-6 fill-brand-yellow text-brand-yellow animate-pulse" />
+                <Star className="w-7 h-7 fill-brand-yellow text-brand-yellow animate-pulse" />
               </div>
 
-              <p className="text-black text-base sm:text-lg max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal relative">
+              <p className="text-black text-lg sm:text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal relative">
                 At Little Scholars International Preschool, we provide a safe, nurturing and stimulating environment where children learn, play and grow with joy.
                 
                 {/* Small star doodle floating to the right of text */}
@@ -171,28 +171,28 @@ export default function AdmissionsPage() {
           
           {/* Left: Admissions Process (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5 text-brand-yellow fill-brand-yellow" />
-              <h2 className="font-fredoka text-xl font-bold text-brand-blue tracking-wider uppercase">
+            <div className="flex items-center space-x-3">
+              <Star className="w-7 h-7 text-brand-yellow fill-brand-yellow" />
+              <h2 className="font-fredoka text-2xl md:text-[36px] font-bold text-brand-blue tracking-wider uppercase">
                 Admissions Process
               </h2>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center relative">
               {steps.map((step, index) => (
-                <div key={step.num} className="flex flex-col items-center relative">
+                <div key={step.num} className="flex flex-col items-center relative h-full">
                   
                   {/* Step Card */}
-                  <div className="w-full bg-white rounded-2xl p-5 border border-slate-100/80 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-3 relative">
-                    <div className="w-14 h-14 rounded-2xl border border-slate-100 bg-slate-50/50 flex items-center justify-center">
+                  <div className="w-full h-full bg-white rounded-2xl p-6 border border-slate-100/80 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center space-y-4 relative">
+                    <div className="w-16 h-16 rounded-2xl border border-slate-100 bg-slate-50/50 flex items-center justify-center flex-shrink-0">
                       {step.icon}
                     </div>
                     {/* Badge number */}
-                    <div className="w-6 h-6 rounded-full bg-brand-blue text-white text-[10px] font-bold flex items-center justify-center font-outfit shadow-sm">
+                    <div className="w-8 h-8 rounded-full bg-brand-blue text-white text-sm md:text-base font-bold flex items-center justify-center font-outfit shadow-sm">
                       {step.num}
                     </div>
-                    <h3 className="font-fredoka font-bold text-brand-blue text-sm">{step.title}</h3>
-                    <p className="text-black text-xs leading-relaxed font-medium">{step.desc}</p>
+                    <h3 className="font-fredoka font-bold text-brand-blue text-xl md:text-2xl">{step.title}</h3>
+                    <p className="text-black text-lg md:text-xl leading-relaxed font-medium">{step.desc}</p>
                   </div>
 
                   {/* Flow Arrow (Only render between steps) */}
@@ -217,19 +217,19 @@ export default function AdmissionsPage() {
           {/* Right: Required Documents (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <h2 className="font-fredoka text-xl font-bold text-brand-blue tracking-wider uppercase">
+              <h2 className="font-fredoka text-2xl md:text-[36px] font-bold text-brand-blue tracking-wider uppercase">
                 Required Documents
               </h2>
             </div>
 
             <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-100/80">
-              <ul className="space-y-4">
+              <ul className="space-y-5">
                 {docs.map((doc, idx) => (
-                  <li key={idx} className="flex items-center space-x-3.5">
-                    <div className="w-7 h-7 rounded-lg bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
-                      <Check className="w-4 h-4 stroke-[3]" />
+                  <li key={idx} className="flex items-center space-x-4">
+                    <div className="w-9 h-9 rounded-lg bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
+                      <Check className="w-5 h-5 stroke-[3]" />
                     </div>
-                    <span className="text-black text-sm font-normal leading-snug">{doc}</span>
+                    <span className="text-black text-xl md:text-2xl font-medium leading-snug">{doc}</span>
                   </li>
                 ))}
               </ul>
@@ -246,21 +246,21 @@ export default function AdmissionsPage() {
           {/* Left: Why Choose Us (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <div>
-              <h2 className="font-fredoka text-xl font-bold text-brand-blue tracking-wider uppercase">
+              <h2 className="font-fredoka text-2xl md:text-[36px] font-bold text-brand-blue tracking-wider uppercase">
                 Why Choose Us?
               </h2>
-              <div className="h-0.5 w-12 bg-brand-yellow mt-1" />
+              <div className="h-1 w-20 bg-brand-yellow mt-2" />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {reasons.map((item, idx) => (
-                <div key={idx} className="bg-white p-5 rounded-2xl border border-slate-100/80 shadow-sm flex items-start space-x-4 hover:shadow-md transition-shadow">
-                  <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center flex-shrink-0 text-brand-blue">
+                <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-100/80 shadow-sm flex items-start space-x-5 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center flex-shrink-0 text-brand-blue">
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="font-fredoka font-bold text-brand-blue text-sm">{item.title}</h3>
-                    <p className="text-black text-xs mt-1 leading-relaxed font-medium">{item.desc}</p>
+                    <h3 className="font-fredoka font-bold text-brand-blue text-xl md:text-2xl">{item.title}</h3>
+                    <p className="text-black text-lg md:text-xl mt-1 leading-relaxed font-medium">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -278,11 +278,11 @@ export default function AdmissionsPage() {
                 </svg>
               </div>
 
-              <div className="space-y-3.5 z-10 relative">
-                <h3 className="font-fredoka font-bold text-xl text-brand-yellow tracking-wide uppercase">
+              <div className="space-y-4 z-10 relative">
+                <h3 className="font-fredoka font-bold text-3xl md:text-[36px] text-brand-yellow tracking-wide uppercase">
                   Limited Seats Available!
                 </h3>
-                <p className="text-slate-200 text-sm font-normal leading-relaxed max-w-sm">
+                <p className="text-slate-250 text-xl md:text-2xl font-normal leading-relaxed max-w-sm">
                   Give your child the gift of quality education, creativity, and joyful play-based learning.
                 </p>
               </div>
@@ -290,10 +290,10 @@ export default function AdmissionsPage() {
               <div className="mt-8 z-10 relative">
                 <Link
                   to="/enroll"
-                  className="bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-fredoka font-bold py-3 px-6 rounded-full inline-flex items-center space-x-2 transition-all duration-300 shadow-md hover:shadow-lg text-sm"
+                  className="bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-fredoka font-bold py-4 px-10 rounded-full inline-flex items-center space-x-2 transition-all duration-300 shadow-md hover:shadow-lg text-lg md:text-xl"
                 >
                   <span>Enroll Now</span>
-                  <ChevronRight className="w-4 h-4 stroke-[3]" />
+                  <ChevronRight className="w-5 h-5 stroke-[3]" />
                 </Link>
               </div>
 
@@ -309,46 +309,46 @@ export default function AdmissionsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Stat 1 */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
-                <Award className="w-5 h-5 text-brand-orange" />
+            <div className="flex items-center space-x-5 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
+              <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Award className="w-7 h-7 text-brand-orange" />
               </div>
               <div>
-                <h4 className="font-fredoka font-black text-brand-blue text-2xl leading-none">10+</h4>
-                <p className="text-black text-xs mt-1 font-semibold">Years of Excellence</p>
+                <h4 className="font-fredoka font-black text-brand-blue text-5xl md:text-6xl leading-none">10+</h4>
+                <p className="text-black text-lg md:text-xl mt-1 font-semibold">Years of Excellence</p>
               </div>
             </div>
 
             {/* Stat 2 */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
-                <Users className="w-5 h-5 text-brand-orange" />
+            <div className="flex items-center space-x-5 border-b sm:border-b-0 pb-4 sm:pb-0 sm:border-r border-slate-200 last:border-0">
+              <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Users className="w-7 h-7 text-brand-orange" />
               </div>
               <div>
-                <h4 className="font-fredoka font-black text-brand-blue text-2xl leading-none">500+</h4>
-                <p className="text-black text-xs mt-1 font-semibold">Happy Students</p>
+                <h4 className="font-fredoka font-black text-brand-blue text-5xl md:text-6xl leading-none">500+</h4>
+                <p className="text-black text-lg md:text-xl mt-1 font-semibold">Happy Students</p>
               </div>
             </div>
 
             {/* Stat 3 */}
-            <div className="flex items-center space-x-4 border-b sm:border-b-0 pb-4 sm:pb-0 lg:border-r border-slate-200 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
-                <GraduationCap className="w-5 h-5 text-brand-orange" />
+            <div className="flex items-center space-x-5 border-b sm:border-b-0 pb-4 sm:pb-0 lg:border-r border-slate-200 last:border-0">
+              <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
+                <GraduationCap className="w-7 h-7 text-brand-orange" />
               </div>
               <div>
-                <h4 className="font-fredoka font-black text-brand-blue text-2xl leading-none">25+</h4>
-                <p className="text-black text-xs mt-1 font-semibold">Qualified Teachers</p>
+                <h4 className="font-fredoka font-black text-brand-blue text-5xl md:text-6xl leading-none">25+</h4>
+                <p className="text-black text-lg md:text-xl mt-1 font-semibold">Qualified Teachers</p>
               </div>
             </div>
 
             {/* Stat 4 */}
-            <div className="flex items-center space-x-4 last:border-0">
-              <div className="w-12 h-12 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
-                <Smile className="w-5 h-5 text-brand-orange" />
+            <div className="flex items-center space-x-5 last:border-0">
+              <div className="w-16 h-16 rounded-full bg-slate-50 border border-slate-200 text-brand-blue flex items-center justify-center flex-shrink-0 shadow-sm">
+                <Smile className="w-7 h-7 text-brand-orange" />
               </div>
               <div>
-                <h4 className="font-fredoka font-black text-brand-blue text-2xl leading-none">100%</h4>
-                <p className="text-black text-xs mt-1 font-semibold">Parent Satisfaction</p>
+                <h4 className="font-fredoka font-black text-brand-blue text-5xl md:text-6xl leading-none">100%</h4>
+                <p className="text-black text-lg md:text-xl mt-1 font-semibold">Parent Satisfaction</p>
               </div>
             </div>
 

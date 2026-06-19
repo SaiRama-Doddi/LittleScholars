@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section id="facilities" className="py-16 md:py-24 bg-white font-outfit relative overflow-hidden scroll-mt-28">
+    <section id="facilities" className="pt-4 md:pt-6 pb-16 md:pb-24 bg-white font-outfit relative overflow-hidden scroll-mt-28">
       
       {/* Decorative backdrop blobs */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-indigo-50/50 rounded-full blur-3xl pointer-events-none" />
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
               <span className="inline-block text-sm font-bold text-brand-orange uppercase tracking-wider font-fredoka bg-brand-lightyellow px-3 py-1.5 rounded-md border border-brand-yellow/30">
                 Why Choose Us
               </span>
-              <h2 className="text-3xl md:text-5xl font-fredoka font-bold text-brand-blue mt-4 leading-tight">
+              <h2 className="text-3xl md:text-[36px] font-fredoka font-bold text-brand-blue mt-4 leading-tight">
                 A Perfect Place For Your <br />
                 <span className="text-brand-orange">Child To Learn & Grow</span>
               </h2>
