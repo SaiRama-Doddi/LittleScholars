@@ -129,7 +129,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`z-50 transition-all duration-300 ${
+    <nav className={`z-[9999] transition-all duration-300 ${
       isScrolled 
         ? 'fixed top-0 left-0 right-0 w-full bg-white/95 backdrop-blur-md shadow-lg py-1' 
         : 'bg-white py-2 shadow-md relative w-full'
@@ -211,6 +211,14 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Overlay background for mobile menu drawer */}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] transition-opacity"
+        />
+      )}
+
       {/* Mobile Menu Panel */}
       <div
         className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[9999] p-6 flex flex-col justify-between mobile-drawer ${
@@ -261,14 +269,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* Overlay background for mobile menu drawer */}
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] transition-opacity"
-        />
-      )}
     </nav>
   )
 }
