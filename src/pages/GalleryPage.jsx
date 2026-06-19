@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Grid, Sparkles, BookOpen, Calendar, ToyBrick, GraduationCap, Smile, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 // Import gallery banner
@@ -250,8 +251,8 @@ export default function GalleryPage() {
       </section>
 
       {/* 3. Lightbox Modal */}
-      {lightbox.isOpen && filteredItems.length > 0 && (
-        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 md:p-6 transition-opacity duration-300">
+      {lightbox.isOpen && filteredItems.length > 0 && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/95 backdrop-blur-md flex flex-col justify-between p-4 md:p-6 transition-opacity duration-300">
           
           {/* Top Actions */}
           <div className="flex justify-between items-center text-white py-2">
@@ -309,9 +310,9 @@ export default function GalleryPage() {
             </p>
           </div>
 
-        </div>
+        </div>,
+        document.body
       )}
-
     </div>
   )
 }
