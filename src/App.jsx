@@ -24,29 +24,34 @@ function ScrollToTop() {
 
 export default function App() {
   const location = useLocation()
+  const isContactPage = location.pathname === '/contact'
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth relative">
+    <div className={`min-h-screen bg-slate-50 flex flex-col justify-between font-outfit select-none scroll-smooth relative ${
+      isContactPage ? 'lg:h-screen lg:overflow-hidden' : ''
+    }`}>
       <ScrollToTop />
       <FloatingBackgroundIcons />
-      <div>
+      <div className={`flex flex-col flex-grow ${isContactPage ? 'lg:h-[calc(100vh-46px)]' : ''}`}>
         {/* Header Block */}
         <TopBar />
         <Navbar />
 
         {/* Routed Sections */}
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/admissions" element={<AdmissionsPage />} />
-          <Route path="/enroll" element={<EnrollPage />} />
-          <Route path="/programs/:programId" element={<ProgramDetailsPage />} />
-        </Routes>
+        <div className="flex-grow flex flex-col">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/admissions" element={<AdmissionsPage />} />
+            <Route path="/enroll" element={<EnrollPage />} />
+            <Route path="/programs/:programId" element={<ProgramDetailsPage />} />
+          </Routes>
+        </div>
       </div>
 
       {/* Footer Block */}
-      <Footer isCompact={location.pathname === '/contact'} />
+      <Footer isCompact={isContactPage} />
     </div>
   )
 }

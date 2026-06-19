@@ -61,10 +61,10 @@ I would like to get in touch. Here are my details:
   }
 
   return (
-    <div className="bg-[#f8fafc] font-outfit min-h-screen lg:h-[calc(100vh-112px)] lg:min-h-[580px] flex flex-col justify-between overflow-x-hidden animate-page-fade relative">
+    <div className="bg-[#f8fafc] font-outfit flex-grow flex flex-col justify-between overflow-x-hidden animate-page-fade relative">
       
       {/* 1. HERO & CONTACT FORM SECTION (White background with blue wavy divider) */}
-      <section className="relative bg-white overflow-hidden pt-4 md:pt-6 pb-12 md:pb-14 lg:pb-16 flex-grow flex items-center">
+      <section className="relative bg-white overflow-hidden pt-2 md:pt-3 pb-8 md:pb-10 lg:pb-12 flex-grow flex items-center">
         
         {/* Paper Airplane Doodle (Top Left) */}
         <div className="absolute top-6 left-6 md:top-10 md:left-16 text-slate-300 pointer-events-none select-none animate-float">
@@ -90,10 +90,10 @@ I would like to get in touch. Here are my details:
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
             
             {/* Left Column: Get In Touch */}
-            <div className="lg:col-span-5 space-y-4 text-left">
+            <div className="lg:col-span-5 space-y-2.5 text-left">
               <div>
                 <h1 className="font-fredoka text-3xl md:text-[36px] font-extrabold text-brand-blue leading-tight tracking-tight uppercase">
                   Get In Touch
@@ -104,55 +104,76 @@ I would like to get in touch. Here are my details:
                 <div className="h-0.5 w-16 bg-brand-yellow mt-2" />
               </div>
 
-              <div className="space-y-2.5">
+              <div className="space-y-2">
                 {/* Location Card */}
                 <div 
-                  onClick={() => setShowMapModal(true)}
-                  className="bg-white p-3.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3.5 hover:shadow-lg transition-shadow duration-300 cursor-pointer group active:scale-[0.98] transition-all"
-                  title="Click to view location map"
+                  onClick={() => window.open("https://www.google.com/maps/dir/?api=1&destination=18.292463,83.877146", "_blank")}
+                  className="bg-white p-2.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3 hover:shadow-lg transition-shadow duration-300 cursor-pointer group active:scale-[0.98] transition-all"
+                  title="Click to get directions on Google Maps"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
-                    <MapPin className="w-4.5 h-4.5" />
+                  <div className="w-8.5 h-8.5 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                    <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <h3 className="font-fredoka font-bold text-brand-blue text-sm group-hover:text-brand-orange transition-colors">Our Location</h3>
-                    <p className="text-black text-xs mt-0.5 leading-relaxed font-normal">
+                    <h3 className="font-fredoka font-bold text-brand-blue text-xs group-hover:text-brand-orange transition-colors">Our Location</h3>
+                    <p className="text-black text-[10px] mt-0.5 leading-normal font-normal">
                       Plot No:14, Kalki Nagar, Near Kerala Building, Thotapalem Road, Srikakulam - 532005
                     </p>
                   </div>
                 </div>
 
                 {/* Phone Numbers Card */}
-                <div className="bg-white p-3.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3.5 hover:shadow-lg transition-shadow duration-300">
-                  <div className="w-10 h-10 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
-                    <Phone className="w-4.5 h-4.5 animate-pulse" />
+                <div className="bg-white p-2.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-8.5 h-8.5 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Phone className="w-4 h-4 animate-pulse" />
                   </div>
                   <div>
-                    <h3 className="font-fredoka font-bold text-brand-blue text-sm">Phone Numbers</h3>
-                    <p className="text-black text-xs mt-0.5 font-normal">
+                    <h3 className="font-fredoka font-bold text-brand-blue text-xs">Phone Numbers</h3>
+                    <p className="text-black text-[10px] mt-0.5 font-normal">
                       9492 8484 89 / 9491 7373 99
                     </p>
                   </div>
                 </div>
 
                 {/* Email Address Card */}
-                <div className="bg-white p-3.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3.5 hover:shadow-lg transition-shadow duration-300">
-                  <div className="w-10 h-10 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
-                    <Mail className="w-4.5 h-4.5" />
+                <div className="bg-white p-2.5 rounded-xl shadow-md border border-slate-100/80 flex items-center space-x-3 hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-8.5 h-8.5 rounded-xl bg-brand-blue text-brand-yellow flex items-center justify-center flex-shrink-0 shadow-inner">
+                    <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <h3 className="font-fredoka font-bold text-brand-blue text-sm">Email Address</h3>
-                    <p className="text-black text-xs mt-0.5 font-normal">
+                    <h3 className="font-fredoka font-bold text-brand-blue text-xs">Email Address</h3>
+                    <p className="text-black text-[10px] mt-0.5 font-normal">
                       littlescholarsips@gmail.com
                     </p>
                   </div>
+                </div>
+
+                {/* Live Location Map */}
+                <div className="relative bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 h-[130px] md:h-[140px] lg:h-[130px] w-full mt-2">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3788.1999265009176!2d83.8771455751861!3d18.29246308275736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDE3JzMyLjkiTiA4M8KwNTInNDcuMCJF!5e0!3m2!1sen!2sin!4v1781838976880!5m2!1sen!2sin" 
+                    className="w-full h-full border-0" 
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Little Scholars Live Location Map"
+                  />
+                  <a 
+                    href="https://www.google.com/maps/dir/?api=1&destination=18.292463,83.877146"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute bottom-2 right-2 bg-brand-blue/90 hover:bg-brand-orange text-white font-bold py-1 px-3 rounded-lg flex items-center space-x-1.5 font-fredoka text-[9px] shadow-md transition-colors"
+                  >
+                    <span>Directions</span>
+                    <Navigation className="w-2.5 h-2.5 fill-current rotate-45" />
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Right Column: Send Us A Message Form */}
             <div className="lg:col-span-7">
-              <div className="bg-white rounded-xl p-4 sm:p-5 shadow-xl border border-slate-100/80 relative">
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-xl border border-slate-100/80 relative">
                 
                 {/* Form Title */}
                 <div className="mb-3 pb-1.5 relative">
@@ -287,66 +308,7 @@ I would like to get in touch. Here are my details:
 
       </section>
 
-      {/* Map Modal Overlay */}
-      {showMapModal && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in text-left">
-          <div className="bg-white rounded-3xl overflow-hidden shadow-2xl border border-slate-100 max-w-3xl w-full relative animate-scale-up flex flex-col max-h-[90vh]">
-            
-            {/* Modal Header */}
-            <div className="p-4 sm:p-5 border-b border-slate-100 flex justify-between items-center bg-slate-50">
-              <div className="flex items-start space-x-3">
-                <div className="bg-brand-blue text-brand-yellow p-2 rounded-xl flex-shrink-0">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-fredoka font-bold text-brand-blue text-sm sm:text-base leading-tight">
-                    Little Scholars International Preschool
-                  </h4>
-                  <p className="text-black text-[10px] sm:text-xs mt-1 font-semibold leading-relaxed">
-                    Plot No:14, Kalki Nagar, Near Kerala Building, Srikakulam - 532005
-                  </p>
-                </div>
-              </div>
-              <button 
-                onClick={() => setShowMapModal(false)}
-                className="text-slate-400 hover:text-brand-orange p-1.5 hover:bg-slate-100 rounded-full transition-colors focus:outline-none flex-shrink-0"
-                aria-label="Close Map Modal"
-              >
-                <X className="w-6 h-6" />
-              </button>
-            </div>
 
-            {/* Map iframe Container */}
-            <div className="relative flex-grow h-[350px] sm:h-[400px] bg-slate-100">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3788.1999265009176!2d83.8771455751861!3d18.29246308275736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDE3JzMyLjkiTiA4M8KwNTInNDcuMCJF!5e0!3m2!1sen!2sin!4v1781838976880!5m2!1sen!2sin" 
-                className="w-full h-full border-0" 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Little Scholars International Preschool Srikakulam Map"
-              />
-            </div>
-
-            {/* Modal Footer */}
-            <div className="p-4 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3">
-              <span className="text-[10px] sm:text-xs text-slate-500 font-semibold">
-                Admissions Open 2026-27
-              </span>
-              <a 
-                href="https://www.google.com/maps/dir/?api=1&destination=18.292463,83.877146"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-brand-blue hover:bg-brand-orange text-white hover:text-brand-blue font-bold py-2.5 px-5 rounded-xl flex justify-center items-center space-x-2 font-fredoka text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
-              >
-                <span>Get Directions on Google Maps</span>
-                <Navigation className="w-4 h-4 fill-current rotate-45" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      )}
 
     </div>
   )
