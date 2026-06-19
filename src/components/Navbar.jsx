@@ -129,11 +129,12 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`z-[9999] transition-all duration-300 ${
-      isScrolled 
-        ? 'fixed top-0 left-0 right-0 w-full bg-white/95 backdrop-blur-md shadow-lg py-1' 
-        : 'bg-white py-2 shadow-md relative w-full'
-    }`}>
+    <>
+      <nav className={`z-[9999] transition-all duration-300 ${
+        isScrolled 
+          ? 'fixed top-0 left-0 right-0 w-full bg-white/95 backdrop-blur-md shadow-lg py-1' 
+          : 'bg-white py-2 shadow-md relative w-full'
+      }`}>
       <div className="w-full px-4 md:px-8 lg:px-12">
         <div className="flex justify-between items-center">
           {/* Logo & School Name */}
@@ -210,65 +211,66 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+    </nav>
 
-      {/* Overlay background for mobile menu drawer */}
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] transition-opacity"
-        />
-      )}
-
-      {/* Mobile Menu Panel */}
+    {/* Overlay background for mobile menu drawer */}
+    {isOpen && (
       <div
-        className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[9999] p-6 flex flex-col justify-between mobile-drawer ${
-          isOpen ? 'translate-x-0 visible' : 'translate-x-full invisible'
-        }`}
-      >
-        <div>
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="font-fredoka text-lg font-bold text-brand-blue">Navigation</h2>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-2 text-brand-blue hover:text-brand-orange focus:outline-none"
-              aria-label="Close menu"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
+        onClick={() => setIsOpen(false)}
+        className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] transition-opacity"
+      />
+    )}
 
-          <div className="flex flex-col space-y-4">
-            {navLinks.map((link) => {
-              const active = isLinkActive(link.href)
-              return (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={`font-semibold text-base py-2 border-b border-slate-100 transition-colors font-outfit ${
-                    active ? 'text-brand-orange' : 'text-brand-blue hover:text-brand-orange'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              )
-            })}
-          </div>
+    {/* Mobile Menu Panel */}
+    <div
+      className={`lg:hidden fixed inset-y-0 right-0 w-72 bg-white shadow-2xl z-[9999] p-6 flex flex-col justify-between mobile-drawer ${
+        isOpen ? 'translate-x-0 visible' : 'translate-x-full invisible'
+      }`}
+    >
+      <div>
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="font-fredoka text-lg font-bold text-brand-blue">Navigation</h2>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="p-2 text-brand-blue hover:text-brand-orange focus:outline-none"
+            aria-label="Close menu"
+          >
+            <X className="w-6 h-6" />
+          </button>
         </div>
 
-        <div className="mt-8 space-y-4">
-          <Link
-            to="/enroll"
-            onClick={() => setIsOpen(false)}
-            className="block w-full text-center bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold py-3 rounded-full transition-all shadow-md font-fredoka"
-          >
-            Enroll Now
-          </Link>
-          <div className="text-center text-xs text-black font-semibold">
-            Admissions Open 2026-27
-          </div>
+        <div className="flex flex-col space-y-4">
+          {navLinks.map((link) => {
+            const active = isLinkActive(link.href)
+            return (
+              <Link
+                key={link.name}
+                to={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className={`font-semibold text-base py-2 border-b border-slate-100 transition-colors font-outfit ${
+                  active ? 'text-brand-orange' : 'text-brand-blue hover:text-brand-orange'
+                }`}
+              >
+                {link.name}
+              </Link>
+            )
+          })}
         </div>
       </div>
-    </nav>
+
+      <div className="mt-8 space-y-4">
+        <Link
+          to="/enroll"
+          onClick={() => setIsOpen(false)}
+          className="block w-full text-center bg-brand-yellow hover:bg-brand-orange text-brand-blue hover:text-white font-bold py-3 rounded-full transition-all shadow-md font-fredoka"
+        >
+          Enroll Now
+        </Link>
+        <div className="text-center text-xs text-black font-semibold">
+          Admissions Open 2026-27
+        </div>
+      </div>
+    </div>
+  </>
   )
 }
